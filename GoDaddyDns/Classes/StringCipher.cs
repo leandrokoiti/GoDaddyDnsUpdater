@@ -4,10 +4,10 @@
 //************************************************************************************************
 
 using System;
-using System.Text;
-using System.Security.Cryptography;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace EncryptStringSample
 {

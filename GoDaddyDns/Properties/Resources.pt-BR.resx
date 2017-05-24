@@ -150,4 +150,7 @@
   <data name="frmMain_Menu_File" xml:space="preserve">
     <value>&amp;Arquivo</value>
   </data>
+  <data name="frmSettings_InvalidTtl" xml:space="preserve">
+    <value>Ttl deve conter um inteiro</value>
+  </data>
 </root>

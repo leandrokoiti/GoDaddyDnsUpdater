@@ -50,24 +50,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataRow.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="DataRow.Designer.cs">
-      <DependentUpon>DataRow.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Classes\GoDaddyHttpClient.cs" />
     <Compile Include="Classes\DnsManager.cs" />
-    <Compile Include="Dto\GoDaddyDomainDto.cs" />
     <Compile Include="Classes\FontManager.cs" />
+    <Compile Include="Dto\AddressMailingDto.cs" />
+    <Compile Include="Dto\ContactDto.cs" />
+    <Compile Include="Dto\DomainSummaryDto.cs" />
     <Compile Include="Dto\IpInfoDto.cs" />
-    <Compile Include="Enums\UpdateStatus.cs" />
-    <Compile Include="Extensions\UpdateStatusExtensions.cs" />
-    <Compile Include="frmAddDomain.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmAddDomain.Designer.cs">
-      <DependentUpon>frmAddDomain.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Dto\RecordDto.cs" />
     <Compile Include="frmBase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,7 +73,6 @@
     <Compile Include="frmSettings.Designer.cs">
       <DependentUpon>frmSettings.cs</DependentUpon>
     </Compile>
-    <Compile Include="Dto\DomainInfoDto.cs" />
     <Compile Include="Classes\NetworkStatus.cs" />
     <Compile Include="Classes\NetworkStatusChangedArgs.cs" />
     <Compile Include="Program.cs" />
@@ -95,15 +84,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="Classes\StringCipher.cs" />
-    <EmbeddedResource Include="DataRow.resx">
-      <DependentUpon>DataRow.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmAddDomain.pt-BR.resx">
-      <DependentUpon>frmAddDomain.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmAddDomain.resx">
-      <DependentUpon>frmAddDomain.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmMain.pt-BR.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -128,7 +108,6 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
-    <None Include="Properties\DataSources\Domain.datasource" />
     <None Include="Properties\DataSources\GoDaddyDns.Dto.DomainSummaryDto.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -1,6 +1,5 @@
 ﻿using EncryptStringSample;
 using GoDaddyDns.Dto;
-using GoDaddyDns.Extensions;
 using iTuner;
 using Newtonsoft.Json;
 using System;
@@ -27,7 +26,7 @@ namespace GoDaddyDns
         /// </summary>
         protected string _currentIp;
 
-        private DnsManager _dnsManager = new DnsManager();
+        private DnsManager _dnsManager = new DnsManager(Program.ApiKey, Program.ApiSecret, Program.DefaultTtl);
 
         public frmMain()
         {
@@ -71,16 +70,8 @@ namespace GoDaddyDns
 
         private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var frm = new frmSettings(this._dnsManager);
+            var frm = new frmSettings();
             frm.ShowDialog();
-        }
-
-        private async void addDomainToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var frm = new frmAddDomain(this._dnsManager);
-            var result = frm.ShowDialog();
-            if (result == DialogResult.OK)
-                await refreshDomainsList();
         }
 
         private void closeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -93,47 +84,9 @@ namespace GoDaddyDns
             this.cmsDomain.Close();
         }
 
-        private async void deleteToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            if (this.gvDomains.SelectedCells.Count > 0)
-            {
-                List<int> selectedIndexes = new List<int>();
-
-                foreach (DataGridViewCell c in this.gvDomains.SelectedCells)
-                    selectedIndexes.Add(c.RowIndex);
-
-                selectedIndexes = selectedIndexes.Distinct().ToList();
-
-                List<GoDaddyDomainDto> domainsToRemove = new List<GoDaddyDomainDto>();
-                foreach (var ix in selectedIndexes)
-                    domainsToRemove.Add(this.gvDomains.Rows[selectedIndexes[ix]].DataBoundItem as GoDaddyDomainDto);
-
-                _dnsManager.RemoveDomains(domainsToRemove);
-
-                await refreshDomainsList();
-            }
-        }
-
         private async void updateIpToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             await updateAllDomains();
-        }
-
-        private void gvDomains_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            //// "Translates" the texts of the grid cells with a more user friendly value
-            //if (e.ColumnIndex == this.gvDomains.Columns["Status"].Index)
-            //{
-            //    if (e.Value == null)
-            //        e.Value = Properties.Resources.Text_NA;
-            //    else
-            //        e.Value = ((UpdateStatus)e.Value).AsString();
-            //}
-            //else if (e.ColumnIndex == this.gvDomains.Columns["LastUpdated"].Index)
-            //{
-            //    if (e.Value == null)
-            //        e.Value = Properties.Resources.Text_NA;
-            //}
         }
 
         private void gvDomains_MouseDown(object sender, MouseEventArgs e)
@@ -264,7 +217,16 @@ namespace GoDaddyDns
                 {
                     var currentIp = await this._dnsManager.GetCurrentIp();
                     this.lblCurrentIp.Text = String.Format(Properties.Resources.frmMain_YourCurrentIp, currentIp.Ip);
-                    this._currentIp = currentIp.Ip;
+
+                    if (currentIp.Ip != this._currentIp)
+                    {
+                        this._currentIp = currentIp.Ip;
+                        await this.updateAllDomains();
+                    }
+                    else
+                    {
+                        this._currentIp = currentIp.Ip;
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -339,7 +301,7 @@ namespace GoDaddyDns
             foreach (DataGridViewRow r in this.gvDomains.Rows)
             {
                 var data = r.DataBoundItem as DomainSummaryDto;
-                r.Cells["current_ip"].Value = data.records.FirstOrDefault().data;
+                r.Cells["current_ip"].Value = data.Records.FirstOrDefault().Data;
             }
         }
 

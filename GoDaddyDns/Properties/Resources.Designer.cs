@@ -116,6 +116,15 @@ namespace GoDaddyDns.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Ttl must be an integer.
+        /// </summary>
+        internal static string frmSettings_InvalidTtl {
+            get {
+                return ResourceManager.GetString("frmSettings_InvalidTtl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to N/A.
         /// </summary>
         internal static string Text_NA {

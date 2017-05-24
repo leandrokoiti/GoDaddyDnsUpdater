@@ -175,7 +175,6 @@
             this.gvDomains.ShowCellToolTips = false;
             this.gvDomains.ShowEditingIcon = false;
             this.gvDomains.ShowRowErrors = false;
-            this.gvDomains.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.gvDomains_CellFormatting);
             this.gvDomains.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.gvDomains_DataBindingComplete);
             this.gvDomains.MouseDown += new System.Windows.Forms.MouseEventHandler(this.gvDomains_MouseDown);
             // 

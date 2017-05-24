@@ -82,5 +82,17 @@ namespace GoDaddyDns.Properties {
                 this["appPassword"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int gdDefaultTtl {
+            get {
+                return ((int)(this["gdDefaultTtl"]));
+            }
+            set {
+                this["gdDefaultTtl"] = value;
+            }
+        }
     }
 }

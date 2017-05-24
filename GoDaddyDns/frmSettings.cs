@@ -1,44 +1,36 @@
-﻿using EncryptStringSample;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.ComponentModel;
-using System.Data;
 using System.Diagnostics;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GoDaddyDns
 {
     public partial class frmSettings : frmBase
     {
-        protected DnsManager _dnsManager;
-
-        public frmSettings(DnsManager dnsManager)
+        public frmSettings()
         {
-            this._dnsManager = dnsManager;
-
             InitializeComponent();
         }
 
         private void frmSettings_Load(object sender, EventArgs e)
         {
-            var apiKey = this._dnsManager.ApiKey;
-            var apiSecret = this._dnsManager.ApiSecret;
+            var apiKey = Program.ApiKey;
 
             if (!String.IsNullOrWhiteSpace(apiKey))
                 this.txtApiKey.Text = apiKey;
+
+            this.txtDefaultTtl.Text = Program.DefaultTtl.ToString();
         }
 
         private void btnOk_Click(object sender, EventArgs e)
         {
             var apiKey = this.txtApiKey.Text;
             var apiSecret = this.txtApiSecret.Text;
+            var defaultTtl = Convert.ToInt32(this.txtDefaultTtl.Text);
 
-            this._dnsManager.ApiKey = apiKey;
-            this._dnsManager.ApiSecret = apiSecret;
+            Program.ApiKey = apiKey;
+            Program.ApiSecret = apiSecret;
+            Program.DefaultTtl = defaultTtl;
 
             this.Close();
         }
@@ -51,6 +43,17 @@ namespace GoDaddyDns
         private void txtRemarks_LinkClicked(object sender, LinkClickedEventArgs e)
         {
             Process.Start(e.LinkText);
+        }
+
+        private void txtDefaultTtl_Validating(object sender, CancelEventArgs e)
+        {
+            int validInteger = 0;
+            if (!int.TryParse(this.txtDefaultTtl.Text, out validInteger))
+            {
+                e.Cancel = true;
+                this.txtDefaultTtl.Select(0, this.txtDefaultTtl.Text.Length);
+                this.errorProvider.SetError(this.txtDefaultTtl, Properties.Resources.frmSettings_InvalidTtl);
+            }
         }
     }
 }
