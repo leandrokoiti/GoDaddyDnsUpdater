@@ -163,7 +163,6 @@
             this.Name = "frmSettings";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
-            this.TopMost = true;
             this.Load += new System.EventHandler(this.frmSettings_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

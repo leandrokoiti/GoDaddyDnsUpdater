@@ -166,13 +166,10 @@
   <data name="portugueseToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Português</value>
   </data>
-  <data name="lblCurrentIp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>173, 17</value>
-  </data>
   <data name="lblCurrentIp.Text" xml:space="preserve">
     <value>Obtendo endereço de IP atual...</value>
   </data>
-  <data name="domain.HeaderText" xml:space="preserve">
+  <data name="domainDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>Domínio</value>
   </data>
   <data name="current_ip.HeaderText" xml:space="preserve">

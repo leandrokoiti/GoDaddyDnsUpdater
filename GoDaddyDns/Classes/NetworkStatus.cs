@@ -219,10 +219,7 @@ namespace iTuner
             {
                 isAvailable = change;
 
-                if (handler != null)
-                {
-                    handler(sender, new NetworkStatusChangedArgs(isAvailable));
-                }
+                handler?.Invoke(sender, new NetworkStatusChangedArgs(isAvailable));
             }
         }
     }

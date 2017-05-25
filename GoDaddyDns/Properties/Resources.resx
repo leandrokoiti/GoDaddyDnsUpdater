@@ -151,6 +151,9 @@
   <data name="UpdateStatus_OK" xml:space="preserve">
     <value>OK</value>
   </data>
+  <data name="frmMain_UpdatingDomainIp" xml:space="preserve">
+    <value>Updating the IP address of {0}...</value>
+  </data>
   <data name="frmSettings_InvalidTtl" xml:space="preserve">
     <value>Ttl must be an integer</value>
   </data>

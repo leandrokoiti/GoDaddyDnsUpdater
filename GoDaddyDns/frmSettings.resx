@@ -121,18 +121,13 @@
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>444, 222</value>
   </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Secret:</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="label2.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>428, 183</value>
-  </data>
-  <data name="&gt;&gt;txtApiSecret.Parent" xml:space="preserve">
-    <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;btnCancel.Parent" xml:space="preserve">
     <value>$this</value>
@@ -152,24 +147,20 @@
   <data name="&gt;&gt;btnOk.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="label1.Error" xml:space="preserve">
-    <value />
-  </data>
   <data name="btnOk.Error" xml:space="preserve">
     <value />
   </data>
   <data name="btnCancel.Error" xml:space="preserve">
     <value />
   </data>
-  <data name="txtDefaultTtl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>68, 63</value>
+  <data name="txtRemarks.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
   </data>
   <data name="&gt;&gt;txtRemarks.Name" xml:space="preserve">
     <value>txtRemarks</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="label2.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="lblKey.Text" xml:space="preserve">
     <value>Key:</value>
@@ -183,15 +174,6 @@
   <data name="txtApiKey.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="btnOk.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;errorProvider.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="btnCancel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
   <data name="&gt;&gt;txtRemarks.Type" xml:space="preserve">
     <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -201,6 +183,9 @@
   <data name="&gt;&gt;txtDefaultTtl.Name" xml:space="preserve">
     <value>txtDefaultTtl</value>
   </data>
+  <data name="label2.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
   <data name="&gt;&gt;txtDefaultTtl.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -209,6 +194,9 @@
   </data>
   <data name="txtRemarks.Size" type="System.Drawing.Size, System.Drawing">
     <value>389, 31</value>
+  </data>
+  <data name="&gt;&gt;txtApiKey.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
@@ -222,14 +210,17 @@
   <data name="&gt;&gt;txtApiSecret.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;txtApiKey.Name" xml:space="preserve">
-    <value>txtApiKey</value>
+  <data name="txtApiSecret.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="txtDefaultTtl.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
   </data>
   <data name="txtDefaultTtl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
+  </data>
+  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 12</value>
   </data>
   <data name="&gt;&gt;lblKey.ZOrder" xml:space="preserve">
     <value>6</value>
@@ -246,29 +237,35 @@
   <data name="lblKey.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
+  <data name="txtApiKey.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
+  <data name="lblKey.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>56, 21</value>
   </data>
-  <data name="btnOk.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="&gt;&gt;txtDefaultTtl.Parent" xml:space="preserve">
+    <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;txtApiSecret.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;btnCancel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="txtApiSecret.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="txtRemarks.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+  <data name="btnCancel.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;btnOk.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="txtRemarks.Text" xml:space="preserve">
+    <value>Please visit https://developer.godaddy.com/getstarted if you don't have a key to create one and update the fields above.</value>
   </data>
   <data name="txtRemarks.ScrollBars" type="System.Windows.Forms.RichTextBoxScrollBars, System.Windows.Forms">
     <value>None</value>
@@ -276,26 +273,14 @@
   <data name="&gt;&gt;label2.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="txtApiKey.Size" type="System.Drawing.Size, System.Drawing">
-    <value>313, 20</value>
-  </data>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>56, 21</value>
   </data>
-  <data name="txtDefaultTtl.Error" xml:space="preserve">
-    <value />
-  </data>
   <data name="lblKey.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="btnCancel.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
   </data>
   <data name="txtDefaultTtl.MaxLength" type="System.Int32, mscorlib">
     <value>10</value>
@@ -309,8 +294,8 @@
   <data name="&gt;&gt;txtRemarks.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="txtRemarks.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="txtRemarks.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
   </data>
   <data name="label1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
@@ -318,11 +303,14 @@
   <data name="btnCancel.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="txtDefaultTtl.Error" xml:space="preserve">
+    <value />
   </data>
   <data name="lblKey.Error" xml:space="preserve">
     <value />
+  </data>
+  <data name="txtDefaultTtl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>68, 63</value>
   </data>
   <data name="&gt;&gt;lblKey.Name" xml:space="preserve">
     <value>lblKey</value>
@@ -330,23 +318,20 @@
   <data name="&gt;&gt;btnOk.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="txtDefaultTtl.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
   <data name="txtRemarks.Error" xml:space="preserve">
     <value />
   </data>
   <data name="btnCancel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
   </data>
-  <data name="txtDefaultTtl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>313, 20</value>
+  <data name="&gt;&gt;errorProvider.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
     <value>341, 148</value>
   </data>
-  <data name="&gt;&gt;txtApiSecret.Name" xml:space="preserve">
-    <value>txtApiSecret</value>
+  <data name="txtApiKey.Size" type="System.Drawing.Size, System.Drawing">
+    <value>313, 20</value>
   </data>
   <data name="txtDefaultTtl.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
@@ -357,11 +342,11 @@
   <data name="btnOk.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
   </data>
+  <data name="btnCancel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
     <value>5</value>
-  </data>
-  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
-    <value>groupBox1</value>
   </data>
   <data name="label1.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
@@ -375,35 +360,38 @@
   <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;txtApiKey.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="label1.Error" xml:space="preserve">
+    <value />
   </data>
   <data name="&gt;&gt;btnCancel.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="&gt;&gt;errorProvider.Name" xml:space="preserve">
+    <value>errorProvider</value>
+  </data>
+  <data name="&gt;&gt;txtDefaultTtl.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btnOk.Name" xml:space="preserve">
+    <value>btnOk</value>
+  </data>
   <data name="txtApiSecret.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
   </data>
-  <data name="txtApiKey.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
+  <data name="&gt;&gt;txtApiKey.Name" xml:space="preserve">
+    <value>txtApiKey</value>
   </data>
-  <data name="txtRemarks.Text" xml:space="preserve">
-    <value>Please visit https://developer.godaddy.com/getstarted if you don't have a key to create one and update the fields above.</value>
+  <data name="btnOk.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
-  <data name="label2.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;label2.Name" xml:space="preserve">
-    <value>label2</value>
+  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>GoDaddyDns.frmBase, GoDaddyDns, Version=1.0.0.1, Culture=neutral, PublicKeyToken=null</value>
+    <value>GoDaddyDns.frmBase, GoDaddyDns, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="btnOk.Text" xml:space="preserve">
     <value>OK</value>
-  </data>
-  <data name="lblKey.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
   </data>
   <data name="label2.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
@@ -417,8 +405,8 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Settings</value>
   </data>
-  <data name="txtRemarks.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+  <data name="txtDefaultTtl.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
     <value>Defaul Ttl:</value>
@@ -426,14 +414,17 @@
   <data name="&gt;&gt;lblKey.Parent" xml:space="preserve">
     <value>groupBox1</value>
   </data>
-  <data name="&gt;&gt;txtDefaultTtl.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;txtApiSecret.Parent" xml:space="preserve">
+    <value>groupBox1</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 62</value>
   </data>
-  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 12</value>
+  <data name="txtDefaultTtl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>313, 20</value>
+  </data>
+  <data name="&gt;&gt;txtApiKey.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="label1.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
@@ -441,26 +432,32 @@
   <data name="btnOk.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
+  <data name="btnCancel.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
   <data name="groupBox1.Error" xml:space="preserve">
     <value />
   </data>
   <data name="lblKey.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 16</value>
   </data>
-  <data name="&gt;&gt;btnOk.Name" xml:space="preserve">
-    <value>btnOk</value>
+  <data name="txtApiKey.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
   </data>
   <data name="lblKey.Size" type="System.Drawing.Size, System.Drawing">
     <value>56, 21</value>
   </data>
-  <data name="txtApiKey.IconPadding" type="System.Int32, mscorlib">
+  <data name="&gt;&gt;txtApiSecret.Name" xml:space="preserve">
+    <value>txtApiSecret</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="btnOk.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="btnCancel.Text" xml:space="preserve">
-    <value>Cancel</value>
-  </data>
-  <data name="&gt;&gt;txtDefaultTtl.Parent" xml:space="preserve">
-    <value>groupBox1</value>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
   </data>
   <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
     <value>groupBox1</value>
@@ -474,20 +471,23 @@
   <data name="txtApiKey.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <data name="txtApiSecret.Location" type="System.Drawing.Point, System.Drawing">
-    <value>68, 40</value>
-  </data>
-  <data name="lblKey.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
   <data name="txtRemarks.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left, Right</value>
   </data>
-  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="txtApiSecret.Location" type="System.Drawing.Point, System.Drawing">
+    <value>68, 40</value>
   </data>
-  <data name="&gt;&gt;errorProvider.Name" xml:space="preserve">
-    <value>errorProvider</value>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>428, 183</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="txtRemarks.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="groupBox1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -498,20 +498,20 @@
   <data name="label2.Error" xml:space="preserve">
     <value />
   </data>
-  <data name="&gt;&gt;txtApiKey.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="lblKey.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
   </data>
   <data name="groupBox1.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;btnOk.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Secret:</value>
   </data>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>pt-BR</value>
-  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>pt-BR</value>
   </metadata>
   <metadata name="errorProvider.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>

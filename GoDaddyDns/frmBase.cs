@@ -57,9 +57,7 @@ namespace GoDaddyDns
 
         protected void OnCultureChanged()
         {
-            var temp = this.CultureChanged;
-            if (temp != null)
-                temp(this, EventArgs.Empty);
+            this.CultureChanged?.Invoke(this, EventArgs.Empty);
         }
     }
 }

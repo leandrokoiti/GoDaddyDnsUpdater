@@ -47,8 +47,7 @@ namespace GoDaddyDns
 
         private void txtDefaultTtl_Validating(object sender, CancelEventArgs e)
         {
-            int validInteger = 0;
-            if (!int.TryParse(this.txtDefaultTtl.Text, out validInteger))
+            if (!int.TryParse(this.txtDefaultTtl.Text, out int validInteger))
             {
                 e.Cancel = true;
                 this.txtDefaultTtl.Select(0, this.txtDefaultTtl.Text.Length);

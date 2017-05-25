@@ -153,4 +153,7 @@
   <data name="frmSettings_InvalidTtl" xml:space="preserve">
     <value>Ttl deve conter um inteiro</value>
   </data>
+  <data name="frmMain_UpdatingDomainIp" xml:space="preserve">
+    <value>Atualizando o endereço de IP de {0}...</value>
+  </data>
 </root>

@@ -121,37 +121,6 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="menuStrip.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="menuStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>612, 24</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="menuStrip.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="menuStrip.Text" xml:space="preserve">
-    <value>menuStrip</value>
-  </data>
-  <data name="&gt;&gt;menuStrip.Name" xml:space="preserve">
-    <value>menuStrip</value>
-  </data>
-  <data name="&gt;&gt;menuStrip.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuStrip.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;menuStrip.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 20</value>
-  </data>
-  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;File</value>
-  </data>
   <data name="updateIpToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
     <value>179, 22</value>
   </data>
@@ -176,11 +145,11 @@
   <data name="closeToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Close</value>
   </data>
-  <data name="languageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 20</value>
+  <data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 20</value>
   </data>
-  <data name="languageToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Language</value>
+  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;File</value>
   </data>
   <data name="englishToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>134, 22</value>
@@ -194,9 +163,55 @@
   <data name="portugueseToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Portuguese</value>
   </data>
+  <data name="languageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 20</value>
+  </data>
+  <data name="languageToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Language</value>
+  </data>
+  <data name="menuStrip.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="menuStrip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>612, 24</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="menuStrip.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="menuStrip.Text" xml:space="preserve">
+    <value>menuStrip</value>
+  </data>
+  <data name="&gt;&gt;menuStrip.Name" xml:space="preserve">
+    <value>menuStrip</value>
+  </data>
+  <data name="&gt;&gt;menuStrip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuStrip.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;menuStrip.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
   <metadata name="statusStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>229, 19</value>
   </metadata>
+  <data name="toolStripProgressBar1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 16</value>
+  </data>
+  <data name="lblCurrentIp.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lblCurrentIp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>495, 17</value>
+  </data>
+  <data name="lblCurrentIp.Text" xml:space="preserve">
+    <value>Retrieving current IP address...</value>
+  </data>
+  <data name="lblCurrentIp.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
   <data name="statusStrip.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 354</value>
   </data>
@@ -219,15 +234,9 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;statusStrip.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
   </data>
-  <data name="lblCurrentIp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>166, 17</value>
-  </data>
-  <data name="lblCurrentIp.Text" xml:space="preserve">
-    <value>Retrieving current IP address...</value>
-  </data>
-  <data name="domain.HeaderText" xml:space="preserve">
+  <data name="domainDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>Domain</value>
   </data>
   <metadata name="current_ip.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -249,8 +258,20 @@
   <metadata name="cmsDomain.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>510, 19</value>
   </metadata>
+  <data name="updateIPToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="updateIPToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Update IP</value>
+  </data>
+  <data name="cancelToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="cancelToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Cancel</value>
+  </data>
   <data name="cmsDomain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>126, 48</value>
+    <value>153, 70</value>
   </data>
   <data name="&gt;&gt;cmsDomain.Name" xml:space="preserve">
     <value>cmsDomain</value>
@@ -277,23 +298,8 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;gvDomains.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
-  <data name="updateIPToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>125, 22</value>
-  </data>
-  <data name="updateIPToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Update IP</value>
-  </data>
-  <data name="cancelToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>125, 22</value>
-  </data>
-  <data name="cancelToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Cancel</value>
-  </data>
-  <metadata name="btnRefreshToolip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>626, 19</value>
-  </metadata>
   <data name="btnRefreshAll.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
@@ -312,6 +318,9 @@
   <data name="btnRefreshAll.Text" xml:space="preserve">
     <value></value>
   </data>
+  <metadata name="btnRefreshToolip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>626, 19</value>
+  </metadata>
   <data name="btnRefreshAll.ToolTip" xml:space="preserve">
     <value>Update all domains</value>
   </data>
@@ -325,33 +334,6 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnRefreshAll.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <metadata name="btnRefreshToolip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>626, 19</value>
-  </metadata>
-  <data name="pbGridView.Location" type="System.Drawing.Point, System.Drawing">
-    <value>248, 170</value>
-  </data>
-  <data name="pbGridView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 23</value>
-  </data>
-  <data name="pbGridView.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="pbGridView.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;pbGridView.Name" xml:space="preserve">
-    <value>pbGridView</value>
-  </data>
-  <data name="&gt;&gt;pbGridView.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pbGridView.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pbGridView.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <metadata name="timerProgress.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
@@ -423,16 +405,22 @@
   <data name="&gt;&gt;portugueseToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;toolStripProgressBar1.Name" xml:space="preserve">
+    <value>toolStripProgressBar1</value>
+  </data>
+  <data name="&gt;&gt;toolStripProgressBar1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;lblCurrentIp.Name" xml:space="preserve">
     <value>lblCurrentIp</value>
   </data>
   <data name="&gt;&gt;lblCurrentIp.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;domain.Name" xml:space="preserve">
-    <value>domain</value>
+  <data name="&gt;&gt;domainDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>domainDataGridViewTextBoxColumn</value>
   </data>
-  <data name="&gt;&gt;domain.Type" xml:space="preserve">
+  <data name="&gt;&gt;domainDataGridViewTextBoxColumn.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;current_ip.Name" xml:space="preserve">
@@ -475,6 +463,6 @@
     <value>frmMain</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>GoDaddyDns.frmBase, GoDaddyDns, Version=1.0.0.1, Culture=neutral, PublicKeyToken=null</value>
+    <value>GoDaddyDns.frmBase, GoDaddyDns, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

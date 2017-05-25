@@ -63,14 +63,23 @@ namespace GoDaddyDns
             var domains = await ListDomains();
 
             foreach (var d in domains)
-            {
-                var record = (await this._goDaddyClient.GetARecord(d)).FirstOrDefault();
+                await UpdateDomain(d, newIp);
+        }
 
-                var currentIp = record.Data;
+        /// <summary>
+        /// Updates the given domain with its new IP address.
+        /// </summary>
+        /// <param name="domain">The domain to be updated.</param>
+        /// <param name="newIp">The new IP to update the domain with.</param>
+        /// <returns></returns>
+        public async Task UpdateDomain(DomainSummaryDto domain, string newIp)
+        {
+            var record = (await this._goDaddyClient.GetARecord(domain)).FirstOrDefault();
 
-                if (currentIp != newIp)
-                    await UpdateRecord(d, record, newIp);
-            }
+            var currentIp = record.Data;
+
+            if (currentIp != newIp)
+                await UpdateRecord(domain, record, newIp);
         }
 
         /// <summary>

@@ -21,13 +21,16 @@ namespace GoDaddyDns
 {
     public partial class frmMain : frmBase
     {
+        #region Fields
         /// <summary>
         /// The external IP address of this machine.
         /// </summary>
         protected string _currentIp;
 
         private DnsManager _dnsManager = new DnsManager(Program.ApiKey, Program.ApiSecret, Program.DefaultTtl);
+        #endregion
 
+        #region Constructors
         public frmMain()
         {
             initializeUI();
@@ -35,8 +38,26 @@ namespace GoDaddyDns
             this.CultureChanged += FrmMain_CultureChanged;
             NetworkStatus.AvailabilityChanged += NetworkStatus_AvailabilityChanged;
         }
+        #endregion
 
         #region Event Handlers
+        private void gvDomains_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            foreach (DataGridViewRow r in this.gvDomains.Rows)
+            {
+                var data = r.DataBoundItem as DomainSummaryDto;
+                r.Cells["current_ip"].Value = data.Records.FirstOrDefault().Data;
+            }
+        }
+
+        private void timerProgress_Tick(object sender, EventArgs e)
+        {
+            if (this.toolStripProgressBar1.Value == this.toolStripProgressBar1.Maximum)
+                this.toolStripProgressBar1.Value = 0;
+            else
+                this.toolStripProgressBar1.Value += 1;
+        }
+
         private void FrmMain_CultureChanged(object sender, EventArgs e)
         {
             // Stores the newly selected culture inside the application settings
@@ -68,10 +89,16 @@ namespace GoDaddyDns
             }
         }
 
-        private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
+        private async void settingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var frm = new frmSettings();
-            frm.ShowDialog();
+            var result = frm.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                this.gvDomains.DataSource = null;
+                this._dnsManager = new DnsManager(Program.ApiKey, Program.ApiSecret, Program.DefaultTtl);
+                await refreshDomainsList();
+            }
         }
 
         private void closeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -96,6 +123,10 @@ namespace GoDaddyDns
             if (e.Button == MouseButtons.Right)
             {
                 var hti = this.gvDomains.HitTest(e.X, e.Y);
+
+                if (hti?.RowIndex < 0)
+                    return;
+
                 this.gvDomains.ClearSelection();
                 this.gvDomains.Rows[hti.RowIndex].Selected = true;
             }
@@ -115,8 +146,26 @@ namespace GoDaddyDns
         {
             changeCulture("pt-BR");
         }
+
+        private async void updateIPToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in this.gvDomains.SelectedRows)
+            {
+                if (row.DataBoundItem is DomainSummaryDto domain)
+                    await updateDomain(domain);
+            }
+        }
         #endregion
 
+        #region Public Methods
+        public void ShowErrorMessage(string message)
+        {
+            this.lblCurrentIp.Text = message;
+            this.lblCurrentIp.ForeColor = Color.Red;
+        }
+        #endregion
+
+        #region Private Methods
         /// <summary>
         /// Changes the culture of the application for the culture specified.
         /// </summary>
@@ -128,23 +177,66 @@ namespace GoDaddyDns
         }
 
         /// <summary>
+        /// Refreshes the ip of the selected domain.
+        /// </summary>
+        /// <returns></returns>
+        private async Task updateDomain(DomainSummaryDto domain)
+        {
+            var updateMessage = String.Format(Properties.Resources.frmMain_UpdatingDomainIp, domain.Domain);
+            await updateDomain(updateMessage, async () =>
+            {
+                await this._dnsManager.UpdateDomain(domain, this._currentIp);
+                await refreshDomainsList();
+            });
+        }
+
+        /// <summary>
         /// Refreshes the ip of every domain stored in this application.
         /// </summary>
         /// <returns></returns>
         private async Task updateAllDomains()
         {
-            var lastMessage = this.lblCurrentIp.Text;
-
-            this.Invoke((MethodInvoker)delegate ()
+            var updateMessage = Properties.Resources.frmMain_UpdatingDomainsIp;
+            await updateDomain(updateMessage, async () =>
             {
-                this.lblCurrentIp.Text = Properties.Resources.frmMain_UpdatingDomainsIp;
+                await this._dnsManager.UpdateAllDomains(this._currentIp);
+                await refreshDomainsList();
             });
+        }
 
-            await this._dnsManager.UpdateAllDomains(this._currentIp);
-            await refreshDomainsList();
+        /// <summary>
+        /// Checks if the application has a key and a secret before executing the given function.
+        /// </summary>
+        /// <param name="fx">The function to be executed.</param>
+        /// <returns></returns>
+        /// <remarks>The function will be a function that uses GoDaddy's API, that's why it needs a key and
+        /// a secret set before running it.</remarks>
+        private async Task runGoDaddyFunction(Func<Task> fx)
+        {
+            if (String.IsNullOrWhiteSpace(Program.ApiKey) ||
+                String.IsNullOrWhiteSpace(Program.ApiSecret))
+                return;
 
-            this.Invoke((MethodInvoker)delegate ()
+            await startProgress(fx);
+        }
+
+        /// <summary>
+        /// Encapsulates the logic involved in updating a domain, which includes settings
+        /// the progress bar and changing the UI message.
+        /// </summary>
+        /// <param name="updatingMessage">The message to set in the user interface.</param>
+        /// <param name="fx">The function to invoke.</param>
+        /// <returns></returns>
+        private async Task updateDomain(string updatingMessage, Func<Task> fx)
+        {
+            await runGoDaddyFunction(async () =>
             {
+                var lastMessage = this.lblCurrentIp.Text;
+
+                this.lblCurrentIp.Text = updatingMessage;
+
+                await fx();
+
                 this.lblCurrentIp.Text = lastMessage;
             });
         }
@@ -164,40 +256,48 @@ namespace GoDaddyDns
         }
 
         /// <summary>
-        /// Lists all domains stored in this application.
+        /// Lists all domains available.
         /// </summary>
         private async Task refreshDomainsList()
         {
-            showProgress();
-
-            this.gvDomains.Enabled = false;
-            this.gvDomains.DataSource = await this._dnsManager.ListDomains();
-            this.gvDomains.Enabled = true;
-
-            stopProgress();
+            await runGoDaddyFunction(async () =>
+            {
+                this.gvDomains.Enabled = false;
+                this.gvDomains.DataSource = await this._dnsManager.ListDomains();
+                this.gvDomains.Enabled = true;
+            });
         }
 
+        /// <summary>
+        /// Starts the progress bar and executes long running method.
+        /// </summary>
+        /// <param name="fx">The method to be executed that will need a progress bar while the user awaits.</param>
+        /// <returns></returns>
+        private async Task startProgress(Func<Task> fx)
+        {
+            this.toolStripProgressBar1.Value = 0;
+            this.toolStripProgressBar1.Visible = true;
+            this.timerProgress.Enabled = true;
+
+            try
+            {
+                await fx();
+                this.toolStripProgressBar1.Value = this.toolStripProgressBar1.Maximum;
+            }
+            finally
+            {
+                stopProgress();
+            }
+        }
+
+        /// <summary>
+        /// Stops the progress bar and resets its value.
+        /// </summary>
         private void stopProgress()
         {
-            this.btnRefreshAll.Enabled = true;
-            this.updateIPToolStripMenuItem.Enabled = true;
-            this.updateIpToolStripMenuItem1.Enabled = true;
+            this.toolStripProgressBar1.Value = 0;
 
-            this.pbGridView.Visible = false;
             this.timerProgress.Enabled = false;
-        }
-
-        private void showProgress()
-        {
-            this.btnRefreshAll.Enabled = false;
-            this.updateIPToolStripMenuItem.Enabled = false;
-            this.updateIpToolStripMenuItem1.Enabled = false;
-
-            this.pbGridView.Value = 0;
-            this.pbGridView.Left = (this.gvDomains.Right / 2) - (this.pbGridView.Width / 2);
-            this.pbGridView.Top = (this.gvDomains.Bottom / 2) - (this.pbGridView.Height / 2);
-            this.pbGridView.Visible = true;
-            this.timerProgress.Enabled = true;
         }
 
         /// <summary>
@@ -206,10 +306,7 @@ namespace GoDaddyDns
         /// <returns></returns>
         private async Task loadCurrentIpAddress()
         {
-            this.Invoke((MethodInvoker)delegate ()
-            {
-                this.lblCurrentIp.Text = Properties.Resources.frmMain_CheckingIp;
-            });
+            this.lblCurrentIp.Text = Properties.Resources.frmMain_CheckingIp;
 
             if (NetworkStatus.IsAvailable)
             {
@@ -258,6 +355,11 @@ namespace GoDaddyDns
             // Invokes the designer method to initialize all controls with the current culture
             InitializeComponent();
 
+            // Places the refresh on the top right corner of the window, since after invoking 
+            // InitializeComponent it will be placed on its starting position
+            this.btnRefreshAll.Left = this.gvDomains.Width - this.btnRefreshAll.Width;
+            this.btnRefreshAll.Top = 0;
+
             // Loads fonts stored within this application
             setCustomFonts();
 
@@ -295,22 +397,6 @@ namespace GoDaddyDns
         {
             this.btnRefreshAll.Font = Program.FontManager.Load("FontAwesome", 12F, FontStyle.Regular);
         }
-
-        private void gvDomains_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
-        {
-            foreach (DataGridViewRow r in this.gvDomains.Rows)
-            {
-                var data = r.DataBoundItem as DomainSummaryDto;
-                r.Cells["current_ip"].Value = data.Records.FirstOrDefault().Data;
-            }
-        }
-
-        private void timerProgress_Tick(object sender, EventArgs e)
-        {
-            if (this.pbGridView.Value == this.pbGridView.Maximum)
-                this.pbGridView.Value = 0;
-            else
-                this.pbGridView.Value += 1;
-        }
+        #endregion
     }
 }

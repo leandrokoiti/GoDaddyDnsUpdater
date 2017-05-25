@@ -98,6 +98,15 @@ namespace GoDaddyDns.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Updating the IP address of {0}....
+        /// </summary>
+        internal static string frmMain_UpdatingDomainIp {
+            get {
+                return ResourceManager.GetString("frmMain_UpdatingDomainIp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Updating the IP address of your domain(s)....
         /// </summary>
         internal static string frmMain_UpdatingDomainsIp {
