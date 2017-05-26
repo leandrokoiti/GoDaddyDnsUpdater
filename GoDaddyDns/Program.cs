@@ -121,6 +121,23 @@ namespace GoDaddyDns
         }
 
         /// <summary>
+        /// Gets or sets the period it will take to manually check for a new ip (in case the IP changes
+        /// but the application doesn't detects it automatically)
+        /// </summary>
+        public static TimeSpan UpdateFrequency
+        {
+            get
+            {
+                return Properties.Settings.Default.appUpdateFrequency;
+            }
+            set
+            {
+                Properties.Settings.Default.appUpdateFrequency = value;
+                Properties.Settings.Default.Save();
+            }
+        }
+
+        /// <summary>
         /// Gets the object responsible for loading fonts required by this application and that might not be installed on this machine.
         /// </summary>
         public static FontLoader FontManager { get; private set; } = new FontLoader();

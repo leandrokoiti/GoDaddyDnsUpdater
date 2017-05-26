@@ -41,8 +41,14 @@
             this.btnOk = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.grpAppSettings = new System.Windows.Forms.GroupBox();
+            this.cmbPeriod = new System.Windows.Forms.ComboBox();
+            this.numTimeout = new System.Windows.Forms.NumericUpDown();
+            this.lblCheckInterval = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
+            this.grpAppSettings.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numTimeout)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -149,12 +155,65 @@
             this.errorProvider.ContainerControl = this;
             resources.ApplyResources(this.errorProvider, "errorProvider");
             // 
+            // grpAppSettings
+            // 
+            resources.ApplyResources(this.grpAppSettings, "grpAppSettings");
+            this.grpAppSettings.Controls.Add(this.cmbPeriod);
+            this.grpAppSettings.Controls.Add(this.numTimeout);
+            this.grpAppSettings.Controls.Add(this.lblCheckInterval);
+            this.errorProvider.SetError(this.grpAppSettings, resources.GetString("grpAppSettings.Error"));
+            this.errorProvider.SetIconAlignment(this.grpAppSettings, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("grpAppSettings.IconAlignment"))));
+            this.errorProvider.SetIconPadding(this.grpAppSettings, ((int)(resources.GetObject("grpAppSettings.IconPadding"))));
+            this.grpAppSettings.Name = "grpAppSettings";
+            this.grpAppSettings.TabStop = false;
+            // 
+            // cmbPeriod
+            // 
+            resources.ApplyResources(this.cmbPeriod, "cmbPeriod");
+            this.errorProvider.SetError(this.cmbPeriod, resources.GetString("cmbPeriod.Error"));
+            this.cmbPeriod.FormattingEnabled = true;
+            this.errorProvider.SetIconAlignment(this.cmbPeriod, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("cmbPeriod.IconAlignment"))));
+            this.errorProvider.SetIconPadding(this.cmbPeriod, ((int)(resources.GetObject("cmbPeriod.IconPadding"))));
+            this.cmbPeriod.Items.AddRange(new object[] {
+            resources.GetString("cmbPeriod.Items"),
+            resources.GetString("cmbPeriod.Items1"),
+            resources.GetString("cmbPeriod.Items2"),
+            resources.GetString("cmbPeriod.Items3")});
+            this.cmbPeriod.Name = "cmbPeriod";
+            // 
+            // numTimeout
+            // 
+            resources.ApplyResources(this.numTimeout, "numTimeout");
+            this.errorProvider.SetError(this.numTimeout, resources.GetString("numTimeout.Error"));
+            this.errorProvider.SetIconAlignment(this.numTimeout, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("numTimeout.IconAlignment"))));
+            this.errorProvider.SetIconPadding(this.numTimeout, ((int)(resources.GetObject("numTimeout.IconPadding"))));
+            this.numTimeout.Maximum = new decimal(new int[] {
+            2147483647,
+            0,
+            0,
+            0});
+            this.numTimeout.Name = "numTimeout";
+            this.numTimeout.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // lblCheckInterval
+            // 
+            resources.ApplyResources(this.lblCheckInterval, "lblCheckInterval");
+            this.errorProvider.SetError(this.lblCheckInterval, resources.GetString("lblCheckInterval.Error"));
+            this.errorProvider.SetIconAlignment(this.lblCheckInterval, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("lblCheckInterval.IconAlignment"))));
+            this.errorProvider.SetIconPadding(this.lblCheckInterval, ((int)(resources.GetObject("lblCheckInterval.IconPadding"))));
+            this.lblCheckInterval.Name = "lblCheckInterval";
+            // 
             // frmSettings
             // 
             this.AcceptButton = this.btnOk;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
+            this.Controls.Add(this.grpAppSettings);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.groupBox1);
@@ -167,6 +226,8 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
+            this.grpAppSettings.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numTimeout)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -184,5 +245,9 @@
         private System.Windows.Forms.TextBox txtDefaultTtl;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ErrorProvider errorProvider;
+        private System.Windows.Forms.GroupBox grpAppSettings;
+        private System.Windows.Forms.ComboBox cmbPeriod;
+        private System.Windows.Forms.NumericUpDown numTimeout;
+        private System.Windows.Forms.Label lblCheckInterval;
     }
 }

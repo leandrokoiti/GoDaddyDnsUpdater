@@ -259,19 +259,19 @@
     <value>510, 19</value>
   </metadata>
   <data name="updateIPToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>125, 22</value>
   </data>
   <data name="updateIPToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Update IP</value>
   </data>
   <data name="cancelToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>125, 22</value>
   </data>
   <data name="cancelToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Cancel</value>
   </data>
   <data name="cmsDomain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>153, 70</value>
+    <value>126, 48</value>
   </data>
   <data name="&gt;&gt;cmsDomain.Name" xml:space="preserve">
     <value>cmsDomain</value>
@@ -338,6 +338,9 @@
   </data>
   <metadata name="timerProgress.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>771, 19</value>
+  </metadata>
+  <metadata name="timerIpRefresh.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>898, 19</value>
   </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -457,6 +460,12 @@
     <value>timerProgress</value>
   </data>
   <data name="&gt;&gt;timerProgress.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;timerIpRefresh.Name" xml:space="preserve">
+    <value>timerIpRefresh</value>
+  </data>
+  <data name="&gt;&gt;timerIpRefresh.Type" xml:space="preserve">
     <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

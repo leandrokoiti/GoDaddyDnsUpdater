@@ -56,6 +56,7 @@
             this.btnRefreshAll = new System.Windows.Forms.Button();
             this.btnRefreshToolip = new System.Windows.Forms.ToolTip(this.components);
             this.timerProgress = new System.Windows.Forms.Timer(this.components);
+            this.timerIpRefresh = new System.Windows.Forms.Timer(this.components);
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvDomains)).BeginInit();
@@ -237,6 +238,12 @@
             // 
             this.timerProgress.Tick += new System.EventHandler(this.timerProgress_Tick);
             // 
+            // timerIpRefresh
+            // 
+            this.timerIpRefresh.Enabled = true;
+            this.timerIpRefresh.Interval = 3600000;
+            this.timerIpRefresh.Tick += new System.EventHandler(this.timerIpRefresh_Tick);
+            // 
             // frmMain
             // 
             resources.ApplyResources(this, "$this");
@@ -285,6 +292,7 @@
         private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar1;
         private System.Windows.Forms.DataGridViewTextBoxColumn domainDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn current_ip;
+        private System.Windows.Forms.Timer timerIpRefresh;
     }
 }
 

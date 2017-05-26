@@ -97,6 +97,7 @@ namespace GoDaddyDns
             {
                 this.gvDomains.DataSource = null;
                 this._dnsManager = new DnsManager(Program.ApiKey, Program.ApiSecret, Program.DefaultTtl);
+                this.timerIpRefresh.Interval = (int)Program.UpdateFrequency.TotalMilliseconds;
                 await refreshDomainsList();
             }
         }
@@ -134,7 +135,7 @@ namespace GoDaddyDns
 
         private async void btnRefreshAll_Click(object sender, EventArgs e)
         {
-            await updateAllDomains();
+            await loadCurrentIpAddress();
         }
 
         private void englishToolStripMenuItem_Click(object sender, EventArgs e)
@@ -360,6 +361,9 @@ namespace GoDaddyDns
             this.btnRefreshAll.Left = this.gvDomains.Width - this.btnRefreshAll.Width;
             this.btnRefreshAll.Top = 0;
 
+            // Loads the interval stored in the settings
+            this.timerIpRefresh.Interval = (int)Program.UpdateFrequency.TotalMilliseconds;
+
             // Loads fonts stored within this application
             setCustomFonts();
 
@@ -398,5 +402,10 @@ namespace GoDaddyDns
             this.btnRefreshAll.Font = Program.FontManager.Load("FontAwesome", 12F, FontStyle.Regular);
         }
         #endregion
+
+        private async void timerIpRefresh_Tick(object sender, EventArgs e)
+        {
+            await loadCurrentIpAddress();
+        }
     }
 }
