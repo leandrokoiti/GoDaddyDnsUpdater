@@ -1,15 +1,11 @@
-﻿using EncryptStringSample;
-using GoDaddyDns.Dto;
-using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
-using System.Security;
-using System.Text;
 using System.Threading.Tasks;
+using DynamicDns.Core.Dto;
 
-namespace GoDaddyDns
+namespace DynamicDns.Core.Classes
 {
     /// <summary>
     /// Class responsible for updating the IP of the domains registered with the credentials informed
@@ -30,8 +26,8 @@ namespace GoDaddyDns
         /// <summary>
         /// Creates a new instance of the Dns Manager and stores the authentication information passed.
         /// </summary>
-        /// <param name="apiKey"><see cref="Program.ApiKey"/></param>
-        /// <param name="apiSecret"><see cref="Program.ApiSecret"/></param>
+        /// <param name="apiKey"><see cref="GoDaddyDns.Program.ApiKey"/></param>
+        /// <param name="apiSecret"><see cref="GoDaddyDns.Program.ApiSecret"/></param>
         public DnsManager(string apiKey, string apiSecret, int defaultTtl)
         {
             this._goDaddyClient = new GoDaddyHttpClient(apiKey, apiSecret);

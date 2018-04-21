@@ -59,13 +59,12 @@ merchantability, fitness for a particular purpose and non-infringement.*/
 //
 //************************************************************************************************
 
-namespace iTuner
+using System;
+using System.Net.NetworkInformation;
+using System.Runtime.CompilerServices;
+
+namespace DynamicDns.Core.Classes
 {
-    using System;
-    using System.Net.NetworkInformation;
-    using System.Runtime.CompilerServices;
-
-
     /// <summary>
     /// Provides notification of status changes related to Internet-specific network
     /// adapters on this machine.  All other adpaters such as tunneling and loopbacks

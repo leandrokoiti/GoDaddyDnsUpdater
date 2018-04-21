@@ -1,18 +1,14 @@
-﻿using EncryptStringSample;
-using GoDaddyDns.Dto;
-using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Net.Http;
-using System.Security;
 using System.Text;
 using System.Threading.Tasks;
+using DynamicDns.Core.Dto;
+using Newtonsoft.Json;
 
-namespace GoDaddyDns
+namespace DynamicDns.Core.Classes
 {
     /// <summary>
-    /// <see cref="HttpClient"/> wrapper that includes the Authorization header on each request.
+    /// <see cref="System.Net.Http.HttpClient"/> wrapper that includes the Authorization header on each request.
     /// </summary>
     public class GoDaddyHttpClient : HttpClient
     {

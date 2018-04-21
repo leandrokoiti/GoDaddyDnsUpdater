@@ -48,7 +48,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
+  <!--<PropertyGroup>
     <ManifestCertificateThumbprint>08A1AAED85EC7E65D6E108E9CB58646546B777EC</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
@@ -59,7 +59,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <SignManifests>true</SignManifests>
-  </PropertyGroup>
+  </PropertyGroup>-->
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -78,14 +78,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\GoDaddyHttpClient.cs" />
-    <Compile Include="Classes\DnsManager.cs" />
     <Compile Include="Classes\FontManager.cs" />
-    <Compile Include="Dto\AddressMailingDto.cs" />
-    <Compile Include="Dto\ContactDto.cs" />
-    <Compile Include="Dto\DomainSummaryDto.cs" />
-    <Compile Include="Dto\IpInfoDto.cs" />
-    <Compile Include="Dto\RecordDto.cs" />
     <Compile Include="frmBase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,8 +94,6 @@
     <Compile Include="frmSettings.Designer.cs">
       <DependentUpon>frmSettings.cs</DependentUpon>
     </Compile>
-    <Compile Include="Classes\NetworkStatus.cs" />
-    <Compile Include="Classes\NetworkStatusChangedArgs.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Settings.cs" />
@@ -111,7 +102,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="Classes\StringCipher.cs" />
     <EmbeddedResource Include="frmMain.pt-BR.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -158,6 +148,15 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Dto\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DynamicDns.Core\DynamicDns.Core.csproj">
+      <Project>{34FABD46-60C0-4E00-843C-9F65FB31525C}</Project>
+      <Name>DynamicDns.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

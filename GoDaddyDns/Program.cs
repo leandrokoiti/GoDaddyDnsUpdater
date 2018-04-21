@@ -1,9 +1,10 @@
-﻿using EncryptStringSample;
-using System;
+﻿using System;
 using System.Globalization;
 using System.Linq;
 using System.Threading;
 using System.Windows.Forms;
+using DynamicDns.Core.Classes;
+using GoDaddyDns.Classes;
 
 namespace GoDaddyDns
 {
