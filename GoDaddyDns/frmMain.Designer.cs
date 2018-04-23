@@ -204,7 +204,7 @@
             // 
             // domainBindingSource
             // 
-            this.domainBindingSource.DataSource = typeof(GoDaddyDns.Dto.DomainSummaryDto);
+            this.domainBindingSource.DataSource = typeof(DynamicDns.Core.Dto.DomainSummaryDto);
             // 
             // cmsDomain
             // 

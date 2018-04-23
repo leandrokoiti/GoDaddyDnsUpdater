@@ -9,7 +9,7 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace EncryptStringSample
+namespace DynamicDns.Core.Classes
 {
     public static class StringCipher
     {

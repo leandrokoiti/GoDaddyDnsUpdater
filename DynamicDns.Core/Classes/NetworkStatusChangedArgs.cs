@@ -59,11 +59,10 @@ merchantability, fitness for a particular purpose and non-infringement.*/
 //
 //************************************************************************************************
 
-namespace iTuner
+using System;
+
+namespace DynamicDns.Core.Classes
 {
-    using System;
-
-
     //********************************************************************************************
     // class NetworkStatusChangedArgs
     //********************************************************************************************
