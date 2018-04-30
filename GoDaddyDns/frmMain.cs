@@ -1,7 +1,4 @@
-﻿using EncryptStringSample;
-using GoDaddyDns.Dto;
-using iTuner;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +13,8 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DynamicDns.Core.Classes;
+using DynamicDns.Core.Dto;
 
 namespace GoDaddyDns
 {

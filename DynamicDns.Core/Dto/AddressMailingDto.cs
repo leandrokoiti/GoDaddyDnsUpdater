@@ -1,4 +1,4 @@
-﻿namespace GoDaddyDns.Dto
+﻿namespace DynamicDns.Core.Dto
 {
     public class AddressMailingDto
     {

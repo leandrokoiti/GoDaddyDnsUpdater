@@ -9,7 +9,7 @@ using System.Drawing.Text;
 using System.Linq;
 using System.Runtime.InteropServices;
 
-namespace GoDaddyDns
+namespace GoDaddyDns.Classes
 {
     /// <summary>
     /// This class is used to load fonts stored inside the application's resource file
@@ -19,7 +19,7 @@ namespace GoDaddyDns
     {
         #region Fields
         /// <summary>
-        /// Stores the fonts loaded using <see cref="Load(string, float, FontStyle)" />.
+        /// Stores the fonts loaded using <see cref="Load(string, float, System.Drawing.FontStyle)" />.
         /// </summary>
         private PrivateFontCollection _fonts = new PrivateFontCollection(); 
         #endregion
@@ -39,8 +39,8 @@ namespace GoDaddyDns
         /// <param name="familyName">The family of the font to be loaded.</param>
         /// <param name="emSize">The size of the font to be created.</param>
         /// <param name="style">The style of the font to be created.</param>
-        /// <returns>Returns a <see cref="Font"/> with its <see cref="Font.Size"/> and
-        /// <see cref="Font.Style"/> defined using the paramters informed. Returns null if the font can't be instantied.</returns>
+        /// <returns>Returns a <see cref="System.Drawing.Font"/> with its <see cref="System.Drawing.Font.Size"/> and
+        /// <see cref="System.Drawing.Font.Style"/> defined using the paramters informed. Returns null if the font can't be instantied.</returns>
         public Font Load(string familyName, float emSize, FontStyle style)
         {
             if (String.IsNullOrWhiteSpace(familyName))
