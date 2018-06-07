@@ -34,14 +34,16 @@ namespace DynamicDns.Core.Classes
 
         public async Task UpdateARecord(DomainSummaryDto domain, RecordDto record, int ttl, string ip)
         {
-            var content = new StringContent(JsonConvert.SerializeObject(new
+            var content = new StringContent(JsonConvert.SerializeObject(new[]
             {
-                ttl = ttl,
-                data = ip
+                new {
+                    ttl = ttl,
+                    data = ip
+                }
             }), Encoding.UTF8, "application/json");
 
             await this.PutAsync($"https://api.godaddy.com/v1/domains/{domain.Domain}/records/A/{record.Name}", content);
-        } 
+        }
         #endregion
     }
 }
