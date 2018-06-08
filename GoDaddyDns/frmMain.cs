@@ -15,6 +15,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DynamicDns.Core.Classes;
 using DynamicDns.Core.Dto;
+using DynamicDns.Core.Interfaces;
 
 namespace GoDaddyDns
 {
@@ -27,6 +28,7 @@ namespace GoDaddyDns
         protected string _currentIp;
 
         private DnsManager _dnsManager = new DnsManager(Program.ApiKey, Program.ApiSecret, Program.DefaultTtl);
+        private IIpRetriever _ipRetriever = new IpInfoIpRetriever();
         #endregion
 
         #region Constructors
@@ -73,18 +75,18 @@ namespace GoDaddyDns
 
         private async void NetworkStatus_AvailabilityChanged(object sender, NetworkStatusChangedArgs e)
         {
-            // If the network is available we must check for the IP address since it may have change since
+            // If the network is available we must check for the IP address since it may have changed since
             // the last time we checked, and enable network related functions.
             // If there's no network available we simply disable the network functions.
             if (e.IsAvailable)
             {
                 await loadCurrentIpAddress();
 
-                toggleNetworkFunctions(true);
+                toggleUiNetworkFunctions(true);
             }
             else
             {
-                toggleNetworkFunctions(false);
+                toggleUiNetworkFunctions(false);
             }
         }
 
@@ -245,7 +247,7 @@ namespace GoDaddyDns
         /// Enables or disables the functions that require an internet connection.
         /// </summary>
         /// <param name="enabled"></param>
-        private void toggleNetworkFunctions(bool enabled)
+        private void toggleUiNetworkFunctions(bool enabled)
         {
             this.Invoke((MethodInvoker)delegate ()
             {
@@ -269,7 +271,7 @@ namespace GoDaddyDns
         }
 
         /// <summary>
-        /// Starts the progress bar and executes long running method.
+        /// Starts the progress bar and executes a long running method.
         /// </summary>
         /// <param name="fx">The method to be executed that will need a progress bar while the user awaits.</param>
         /// <returns></returns>
@@ -312,7 +314,7 @@ namespace GoDaddyDns
             {
                 try
                 {
-                    var currentIp = await this._dnsManager.GetCurrentIp();
+                    var currentIp = await this._ipRetriever.GetCurrentIp();
                     this.lblCurrentIp.Text = String.Format(Properties.Resources.frmMain_YourCurrentIp, currentIp.Ip);
 
                     if (currentIp.Ip != this._currentIp)

@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="Classes\DnsManager.cs" />
     <Compile Include="Classes\GoDaddyHttpClient.cs" />
+    <Compile Include="Classes\IpInfoIpRetriever.cs" />
     <Compile Include="Classes\NetworkStatus.cs" />
     <Compile Include="Classes\NetworkStatusChangedArgs.cs" />
     <Compile Include="Classes\StringCipher.cs" />
@@ -54,6 +55,7 @@
     <Compile Include="Dto\DomainSummaryDto.cs" />
     <Compile Include="Dto\IpInfoDto.cs" />
     <Compile Include="Dto\RecordDto.cs" />
+    <Compile Include="Interfaces\IIpRetriever.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
