@@ -10,6 +10,10 @@ This client was created based on the project "GoDaddy_Powershell_DDNS" by markaf
 ---
 
 # Download Release versions:
+### [1.0.3](Release/1.0.3.7z)
+
+Fixed [this bug](https://github.com/leandrokoiti/GoDaddyDnsUpdater/issues/3)
+
 ### [1.0.2](Release/1.0.2.7z)
 
 Increased the number of domains listed in order to retrieve every active domain in cases where the number of inactive domains is too large
