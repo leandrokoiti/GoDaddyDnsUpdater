@@ -117,107 +117,47 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="btnCancel.Text" xml:space="preserve">
-    <value>Cancelar</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="chkTray.Location" type="System.Drawing.Point, System.Drawing">
-    <value>238, 50</value>
-  </data>
-  <data name="chkTray.Size" type="System.Drawing.Size, System.Drawing">
-    <value>143, 17</value>
-  </data>
-  <data name="chkTray.Text" xml:space="preserve">
-    <value>Minimizar para a bandeja</value>
-  </data>
-  <data name="cmbPeriod.Items" xml:space="preserve">
-    <value>segundo(s)</value>
-  </data>
-  <data name="cmbPeriod.Items1" xml:space="preserve">
-    <value>minuto(s)</value>
-  </data>
-  <data name="cmbPeriod.Items2" xml:space="preserve">
-    <value>hora(s)</value>
-  </data>
-  <data name="cmbPeriod.Items3" xml:space="preserve">
-    <value>dia(s)</value>
-  </data>
-  <data name="cmbPeriod.Location" type="System.Drawing.Point, System.Drawing">
-    <value>281, 23</value>
-  </data>
-  <data name="cmbPeriod.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 21</value>
-  </data>
-  <data name="cmbPeriod.Text" xml:space="preserve">
-    <value>hora(s)</value>
-  </data>
-  <data name="numTimeout.Location" type="System.Drawing.Point, System.Drawing">
-    <value>155, 24</value>
-  </data>
-  <data name="numTimeout.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 20</value>
-  </data>
-  <data name="lblCheckInterval.Size" type="System.Drawing.Size, System.Drawing">
-    <value>143, 23</value>
-  </data>
-  <data name="lblCheckInterval.Text" xml:space="preserve">
-    <value>Verificar novo IP a cada:</value>
-  </data>
-  <data name="grpAppSettings.Text" xml:space="preserve">
-    <value>Configurações do Aplicativo</value>
-  </data>
-  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>444, 300</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Configurações</value>
-  </data>
-  <data name="txtDefaultTtl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>85, 63</value>
-  </data>
-  <data name="txtDefaultTtl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>296, 20</value>
-  </data>
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 21</value>
-  </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Ttl Padrão:</value>
-  </data>
-  <data name="txtApiSecret.Location" type="System.Drawing.Point, System.Drawing">
-    <value>85, 40</value>
-  </data>
-  <data name="txtApiSecret.Size" type="System.Drawing.Size, System.Drawing">
-    <value>296, 20</value>
-  </data>
-  <data name="txtApiKey.Location" type="System.Drawing.Point, System.Drawing">
-    <value>85, 17</value>
-  </data>
-  <data name="txtApiKey.Size" type="System.Drawing.Size, System.Drawing">
-    <value>296, 20</value>
-  </data>
-  <data name="txtRemarks.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 93</value>
-  </data>
-  <data name="txtRemarks.Text" xml:space="preserve">
-    <value>Visite https://developer.godaddy.com/getstarted caso não possua uma chave para criar uma e atualizar os campos acima.</value>
-  </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 21</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Segredo:</value>
-  </data>
-  <data name="lblKey.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 21</value>
-  </data>
-  <data name="lblKey.Text" xml:space="preserve">
-    <value>Chave:</value>
-  </data>
-  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>404, 132</value>
-  </data>
-  <data name="groupBox1.Text" xml:space="preserve">
-    <value>Configurações da API</value>
+  <data name="trayIcon.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAICAAAAEACACoCAAAFgAAACgAAAAgAAAAQAAAAAEACAAAAAAAgAQAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAD/AACA/wCAAP8AgID/gAAA/4AAgP+AgAD/wMDA/8DcwP/wyqb/KUJC/ykpKf8hMTH/KTEx/zEx
+        Mf8xOTH/ITk5/zk5Of8QQjn/GEI5/ylCQv85QkL/QkJC/0JKQv8YUkL/OUpK/0JKSv9KSkr/KVJK/0pS
+        Sv8YWkr/MVJS/0pSUv9SUlL/QlJa/0paWv9SWlr/Wlpa/xBjWv8Qa1r/IWNj/2NjY/8Ie2P/CIRj/2Nr
+        a/9ra2v/EHtr/xhjc/85a3P/a3Nz/3Nzc/9ze3P/CIxz/wiUc/9ze3v/e3t7/wice/9re4T/e3uE/3uE
+        hP+EhIT/EKWE/wCthP8Yc4z/MXuM/4yMjP+MjJT/lJSU/wi1lP8AvZT/CL2U/wDGlP8QjJz/jJSc/5Sc
+        nP+cnJz/pZyc/wDOnP97jKX/nKWl/6Wlpf8IlK3/pa2t/62trf+trbX/tbW1/7W1vf+1vb3/vb29/wil
+        xv+9xsb/xsbG/87Ozv9rpdb/ztbW/9bW1v/W1t7/3t7e/xiM5/8hjOf/MZTn/zmc5/9CnOf/Upzn/3u1
+        5//W3uf/3ufn/+fn5/8YjO//IYzv/ymU7/8xlO//MZzv/zmc7/9CnO//Spzv/0ql7/9Spe//Uq3v/1qt
+        7/9jre//a63v/2u17/97te//e73v/4S97/+Mve//AMbv/5TG7/+lzu//1ufv/+fv7//v7+//c733/4zG
+        9/+czvf/rc73/63W9/+11vf/vd73/8be9//O3vf/zuf3/9bn9//e7/f/5+/3/+/v9//v9/f/9/f3/87n
+        ///W5///1u///97v///n7///5/f//+/3///39///9///////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ///////////////////////////////////w+///pKCg/4CAgP8AAP//AP8A/wD/////AAD//wD/////
+        AP//////AAAAAAAAAAAAAABrKQcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFsbFjJhYVU7NlgA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAA9zySQxoaKfdLIUEAAAAAAAAAAAAAAAAAAAAAAAAAAAApVZ6elJSe
+        np5rG2sAAAAAAAAAAAAAAAAAAAAAAAAAhCFhnp6enp5hQyUOawAAAAAAAAAAAAAAAAAAAAAAAABeJZSe
+        np6UQxo8UCEAAAAAAAAAAAAAAAAAAAAAAAAAAFA3np6elDwta54zUAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        MlWenp5TKYSeXCFrAAAAAAAAAAAAAAAAAAAAAAAAgwcWYZ6eayRhnp43SgAAAAAAAAAAAAAAAAAAAAAA
+        AF8hIRqEnp6UYZ6enjI3XwAAAAAAAAAAAAAAAAAAAAAA+EFTMp6enp6enp6eazchJVUAAAAAAAAAAAAA
+        AAAAAAAb+DZSnp6enp6enp6enpRQKQAAAAAAAAAAAAAAAAAAhBYbC1+enmtQQ1ODnp6UhEP4AAAAAAAA
+        AAAAAAAAAAAAQSUWhJ5hGiYuHiBrYTIZCgotXAAAAAAAAAAAAAAAAAAAMQsySyErTU1NJzIkKkRGRjQV
+        hAAAAAAAAAAAAAAAAABB+FVDFj1NTU01Cw04R01HPg+DAAAAAAAAAAAAAAAAWw9cnpRBEjhGOBNXByQT
+        GBwjVwAAAAAAAAAAAAAAAABfEVtr+BZLJB8kVpSeaxZTX4QAAAAAAAAAAAAAAAAAa1AoQDAoQ56UhJSe
+        np5LMgAAAAAAAAAAAAAAAAAAAABSDT9/WSNrnp6enp6eXxtfAAAAAAAAAAAAAAAAAAAAAAAkL39REDGU
+        np6enl8bVQAAAAAAAAAAAAAAAAAAAAAAhBsdSCwHYZ6elGFLG1MAAAAAAAAAAAAAAAAAAAAAAAAAXTkN
+        Gi34QTclGvhhAAAAAAAAAAAAAAAAAAAAAAAAAAB6ZzJfVfdJTltpjgAAAAAAAAAAAAAAAAAAAAAAAAAA
+        k3V4aXiRAIFjioxkggAAAAAAAAAAAAAAAAAAAAAAAJN5ZI+RboEAAGaAj2OGAAAAAAAAAAAAAAAAAAAA
+        AAAAe2OOnopijACNZI+HYowAAAAAAAAAAAAAAAAAAAAAAABkaJ6TZWUAAHl1kWR3AAAAAAAAAAAAAAAA
+        AAAAAAAAAGRonmhijACYboGAY48AAAAAAAAAAAAAAAAAAAAAAAAAfWiRZHkAAJFkfnN7AAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAABmdY8AAIBkaGKOAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJF3dQAAAIyNdI8AAAAA
+        AAAAAAAAAAAAAP/j////4Af//+AD///gAf//wAH//8AD///AA///wAP//wAH//4AA//+AAD//gAA//wA
+        AP/+AAA//wAAH/8AAB/+AAA//gAAf/wAA//8AAP//gAH//wAD//+AB///gA///wIH//4DB//+Agf//gY
+        P//4ED//+DB///8YP///HD//
+</value>
   </data>
 </root>

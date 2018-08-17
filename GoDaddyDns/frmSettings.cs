@@ -27,6 +27,7 @@ namespace GoDaddyDns
                 this.txtApiKey.Text = apiKey;
 
             this.txtDefaultTtl.Text = Program.DefaultTtl.ToString();
+            this.chkTray.Checked = Program.MinimizeToTray;
 
             if ( Program.UpdateFrequency.TotalDays >= 1)
             {
@@ -58,11 +59,13 @@ namespace GoDaddyDns
             var intervalValue = this.numTimeout.Value;
             var intervalPeriod = (TimePeriod)this.cmbPeriod.SelectedIndex;
             var interval = generateInterval(intervalValue, intervalPeriod);
+            var minimizeToTray = this.chkTray.Checked;
 
             Program.ApiKey = apiKey;
             Program.ApiSecret = apiSecret;
             Program.DefaultTtl = defaultTtl;
             Program.UpdateFrequency = interval;
+            Program.MinimizeToTray = minimizeToTray;
 
             this.Close();
         }

@@ -57,23 +57,30 @@
             this.btnRefreshToolip = new System.Windows.Forms.ToolTip(this.components);
             this.timerProgress = new System.Windows.Forms.Timer(this.components);
             this.timerIpRefresh = new System.Windows.Forms.Timer(this.components);
+            this.trayIcon = new System.Windows.Forms.NotifyIcon(this.components);
+            this.cmsTray = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.showGoDaddyDNSUpdaterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvDomains)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.domainBindingSource)).BeginInit();
             this.cmsDomain.SuspendLayout();
+            this.cmsTray.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip
             // 
+            resources.ApplyResources(this.menuStrip, "menuStrip");
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.languageToolStripMenuItem});
-            resources.ApplyResources(this.menuStrip, "menuStrip");
             this.menuStrip.Name = "menuStrip";
+            this.btnRefreshToolip.SetToolTip(this.menuStrip, resources.GetString("menuStrip.ToolTip"));
             // 
             // fileToolStripMenuItem
             // 
+            resources.ApplyResources(this.fileToolStripMenuItem, "fileToolStripMenuItem");
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.updateIpToolStripMenuItem1,
             this.toolStripMenuItem2,
@@ -81,68 +88,68 @@
             this.toolStripMenuItem1,
             this.closeToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            resources.ApplyResources(this.fileToolStripMenuItem, "fileToolStripMenuItem");
             // 
             // updateIpToolStripMenuItem1
             // 
-            this.updateIpToolStripMenuItem1.Name = "updateIpToolStripMenuItem1";
             resources.ApplyResources(this.updateIpToolStripMenuItem1, "updateIpToolStripMenuItem1");
+            this.updateIpToolStripMenuItem1.Name = "updateIpToolStripMenuItem1";
             this.updateIpToolStripMenuItem1.Click += new System.EventHandler(this.updateIpToolStripMenuItem1_Click);
             // 
             // toolStripMenuItem2
             // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
             resources.ApplyResources(this.toolStripMenuItem2, "toolStripMenuItem2");
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
             // 
             // settingsToolStripMenuItem
             // 
-            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
             resources.ApplyResources(this.settingsToolStripMenuItem, "settingsToolStripMenuItem");
+            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
             this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             resources.ApplyResources(this.toolStripMenuItem1, "toolStripMenuItem1");
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             // 
             // closeToolStripMenuItem
             // 
-            this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
             resources.ApplyResources(this.closeToolStripMenuItem, "closeToolStripMenuItem");
+            this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
             this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
             // 
             // languageToolStripMenuItem
             // 
+            resources.ApplyResources(this.languageToolStripMenuItem, "languageToolStripMenuItem");
             this.languageToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.englishToolStripMenuItem,
             this.portugueseToolStripMenuItem});
             this.languageToolStripMenuItem.Name = "languageToolStripMenuItem";
-            resources.ApplyResources(this.languageToolStripMenuItem, "languageToolStripMenuItem");
             // 
             // englishToolStripMenuItem
             // 
-            this.englishToolStripMenuItem.Name = "englishToolStripMenuItem";
             resources.ApplyResources(this.englishToolStripMenuItem, "englishToolStripMenuItem");
+            this.englishToolStripMenuItem.Name = "englishToolStripMenuItem";
             this.englishToolStripMenuItem.Click += new System.EventHandler(this.englishToolStripMenuItem_Click);
             // 
             // portugueseToolStripMenuItem
             // 
-            this.portugueseToolStripMenuItem.Name = "portugueseToolStripMenuItem";
             resources.ApplyResources(this.portugueseToolStripMenuItem, "portugueseToolStripMenuItem");
+            this.portugueseToolStripMenuItem.Name = "portugueseToolStripMenuItem";
             this.portugueseToolStripMenuItem.Click += new System.EventHandler(this.portugueseToolStripMenuItem_Click);
             // 
             // statusStrip
             // 
+            resources.ApplyResources(this.statusStrip, "statusStrip");
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripProgressBar1,
             this.lblCurrentIp});
-            resources.ApplyResources(this.statusStrip, "statusStrip");
             this.statusStrip.Name = "statusStrip";
+            this.btnRefreshToolip.SetToolTip(this.statusStrip, resources.GetString("statusStrip.ToolTip"));
             // 
             // toolStripProgressBar1
             // 
-            this.toolStripProgressBar1.Name = "toolStripProgressBar1";
             resources.ApplyResources(this.toolStripProgressBar1, "toolStripProgressBar1");
+            this.toolStripProgressBar1.Name = "toolStripProgressBar1";
             // 
             // lblCurrentIp
             // 
@@ -153,6 +160,7 @@
             // 
             // gvDomains
             // 
+            resources.ApplyResources(this.gvDomains, "gvDomains");
             this.gvDomains.AllowUserToAddRows = false;
             this.gvDomains.AutoGenerateColumns = false;
             this.gvDomains.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -173,7 +181,6 @@
             this.domainDataGridViewTextBoxColumn,
             this.current_ip});
             this.gvDomains.DataSource = this.domainBindingSource;
-            resources.ApplyResources(this.gvDomains, "gvDomains");
             this.gvDomains.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.gvDomains.EnableHeadersVisualStyles = false;
             this.gvDomains.Name = "gvDomains";
@@ -184,6 +191,7 @@
             this.gvDomains.ShowCellToolTips = false;
             this.gvDomains.ShowEditingIcon = false;
             this.gvDomains.ShowRowErrors = false;
+            this.btnRefreshToolip.SetToolTip(this.gvDomains, resources.GetString("gvDomains.ToolTip"));
             this.gvDomains.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.gvDomains_DataBindingComplete);
             this.gvDomains.MouseDown += new System.Windows.Forms.MouseEventHandler(this.gvDomains_MouseDown);
             // 
@@ -208,22 +216,23 @@
             // 
             // cmsDomain
             // 
+            resources.ApplyResources(this.cmsDomain, "cmsDomain");
             this.cmsDomain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.updateIPToolStripMenuItem,
             this.cancelToolStripMenuItem});
             this.cmsDomain.Name = "cmsDomain";
-            resources.ApplyResources(this.cmsDomain, "cmsDomain");
+            this.btnRefreshToolip.SetToolTip(this.cmsDomain, resources.GetString("cmsDomain.ToolTip"));
             // 
             // updateIPToolStripMenuItem
             // 
-            this.updateIPToolStripMenuItem.Name = "updateIPToolStripMenuItem";
             resources.ApplyResources(this.updateIPToolStripMenuItem, "updateIPToolStripMenuItem");
+            this.updateIPToolStripMenuItem.Name = "updateIPToolStripMenuItem";
             this.updateIPToolStripMenuItem.Click += new System.EventHandler(this.updateIPToolStripMenuItem_Click);
             // 
             // cancelToolStripMenuItem
             // 
-            this.cancelToolStripMenuItem.Name = "cancelToolStripMenuItem";
             resources.ApplyResources(this.cancelToolStripMenuItem, "cancelToolStripMenuItem");
+            this.cancelToolStripMenuItem.Name = "cancelToolStripMenuItem";
             this.cancelToolStripMenuItem.Click += new System.EventHandler(this.cancelToolStripMenuItem_Click);
             // 
             // btnRefreshAll
@@ -244,6 +253,33 @@
             this.timerIpRefresh.Interval = 3600000;
             this.timerIpRefresh.Tick += new System.EventHandler(this.timerIpRefresh_Tick);
             // 
+            // trayIcon
+            // 
+            resources.ApplyResources(this.trayIcon, "trayIcon");
+            this.trayIcon.ContextMenuStrip = this.cmsTray;
+            this.trayIcon.DoubleClick += new System.EventHandler(this.trayIcon_DoubleClick);
+            // 
+            // cmsTray
+            // 
+            resources.ApplyResources(this.cmsTray, "cmsTray");
+            this.cmsTray.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.showGoDaddyDNSUpdaterToolStripMenuItem,
+            this.exitToolStripMenuItem});
+            this.cmsTray.Name = "cmsTray";
+            this.btnRefreshToolip.SetToolTip(this.cmsTray, resources.GetString("cmsTray.ToolTip"));
+            // 
+            // showGoDaddyDNSUpdaterToolStripMenuItem
+            // 
+            resources.ApplyResources(this.showGoDaddyDNSUpdaterToolStripMenuItem, "showGoDaddyDNSUpdaterToolStripMenuItem");
+            this.showGoDaddyDNSUpdaterToolStripMenuItem.Name = "showGoDaddyDNSUpdaterToolStripMenuItem";
+            this.showGoDaddyDNSUpdaterToolStripMenuItem.Click += new System.EventHandler(this.showGoDaddyDNSUpdaterToolStripMenuItem_Click);
+            // 
+            // exitToolStripMenuItem
+            // 
+            resources.ApplyResources(this.exitToolStripMenuItem, "exitToolStripMenuItem");
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
             // frmMain
             // 
             resources.ApplyResources(this, "$this");
@@ -254,7 +290,9 @@
             this.Controls.Add(this.menuStrip);
             this.MainMenuStrip = this.menuStrip;
             this.Name = "frmMain";
+            this.btnRefreshToolip.SetToolTip(this, resources.GetString("$this.ToolTip"));
             this.Load += new System.EventHandler(this.frmMain_Load);
+            this.Resize += new System.EventHandler(this.frmMain_Resize);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.statusStrip.ResumeLayout(false);
@@ -262,6 +300,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gvDomains)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.domainBindingSource)).EndInit();
             this.cmsDomain.ResumeLayout(false);
+            this.cmsTray.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -293,6 +332,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn domainDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn current_ip;
         private System.Windows.Forms.Timer timerIpRefresh;
+        private System.Windows.Forms.NotifyIcon trayIcon;
+        private System.Windows.Forms.ContextMenuStrip cmsTray;
+        private System.Windows.Forms.ToolStripMenuItem showGoDaddyDNSUpdaterToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
     }
 }
 

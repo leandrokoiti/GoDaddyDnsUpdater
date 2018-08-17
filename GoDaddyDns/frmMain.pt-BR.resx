@@ -118,18 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 20</value>
-  </data>
-  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Arquivo</value>
-  </data>
-  <data name="languageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 20</value>
-  </data>
-  <data name="languageToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Idioma</value>
-  </data>
   <data name="updateIpToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
     <value>224, 22</value>
   </data>
@@ -154,6 +142,12 @@
   <data name="closeToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Fechar</value>
   </data>
+  <data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 20</value>
+  </data>
+  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Arquivo</value>
+  </data>
   <data name="englishToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>128, 22</value>
   </data>
@@ -166,8 +160,20 @@
   <data name="portugueseToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Português</value>
   </data>
+  <data name="languageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 20</value>
+  </data>
+  <data name="languageToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Idioma</value>
+  </data>
+  <data name="menuStrip.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="lblCurrentIp.Text" xml:space="preserve">
     <value>Obtendo endereço de IP atual...</value>
+  </data>
+  <data name="statusStrip.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="domainDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>Domínio</value>
@@ -179,7 +185,79 @@
   <data name="gvDomains.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
+  <data name="cmsDomain.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gvDomains.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="btnRefreshAll.ToolTip" xml:space="preserve">
     <value>Atualizar todos os domínios</value>
+  </data>
+  <data name="trayIcon.BalloonTipText" xml:space="preserve">
+    <value>Go Daddy DNS Updater ainda está em execução</value>
+  </data>
+  <data name="showGoDaddyDNSUpdaterToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>228, 22</value>
+  </data>
+  <data name="showGoDaddyDNSUpdaterToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Exibir Go Daddy DNS Updater</value>
+  </data>
+  <data name="exitToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>228, 22</value>
+  </data>
+  <data name="exitToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Sair</value>
+  </data>
+  <data name="cmsTray.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 48</value>
+  </data>
+  <data name="cmsTray.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="trayIcon.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAICAAAAEACACoCAAAFgAAACgAAAAgAAAAQAAAAAEACAAAAAAAgAQAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAD/AACA/wCAAP8AgID/gAAA/4AAgP+AgAD/wMDA/8DcwP/wyqb/KUJC/ykpKf8hMTH/KTEx/zEx
+        Mf8xOTH/ITk5/zk5Of8QQjn/GEI5/ylCQv85QkL/QkJC/0JKQv8YUkL/OUpK/0JKSv9KSkr/KVJK/0pS
+        Sv8YWkr/MVJS/0pSUv9SUlL/QlJa/0paWv9SWlr/Wlpa/xBjWv8Qa1r/IWNj/2NjY/8Ie2P/CIRj/2Nr
+        a/9ra2v/EHtr/xhjc/85a3P/a3Nz/3Nzc/9ze3P/CIxz/wiUc/9ze3v/e3t7/wice/9re4T/e3uE/3uE
+        hP+EhIT/EKWE/wCthP8Yc4z/MXuM/4yMjP+MjJT/lJSU/wi1lP8AvZT/CL2U/wDGlP8QjJz/jJSc/5Sc
+        nP+cnJz/pZyc/wDOnP97jKX/nKWl/6Wlpf8IlK3/pa2t/62trf+trbX/tbW1/7W1vf+1vb3/vb29/wil
+        xv+9xsb/xsbG/87Ozv9rpdb/ztbW/9bW1v/W1t7/3t7e/xiM5/8hjOf/MZTn/zmc5/9CnOf/Upzn/3u1
+        5//W3uf/3ufn/+fn5/8YjO//IYzv/ymU7/8xlO//MZzv/zmc7/9CnO//Spzv/0ql7/9Spe//Uq3v/1qt
+        7/9jre//a63v/2u17/97te//e73v/4S97/+Mve//AMbv/5TG7/+lzu//1ufv/+fv7//v7+//c733/4zG
+        9/+czvf/rc73/63W9/+11vf/vd73/8be9//O3vf/zuf3/9bn9//e7/f/5+/3/+/v9//v9/f/9/f3/87n
+        ///W5///1u///97v///n7///5/f//+/3///39///9///////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ///////////////////////////////////w+///pKCg/4CAgP8AAP//AP8A/wD/////AAD//wD/////
+        AP//////AAAAAAAAAAAAAABrKQcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFsbFjJhYVU7NlgA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAA9zySQxoaKfdLIUEAAAAAAAAAAAAAAAAAAAAAAAAAAAApVZ6elJSe
+        np5rG2sAAAAAAAAAAAAAAAAAAAAAAAAAhCFhnp6enp5hQyUOawAAAAAAAAAAAAAAAAAAAAAAAABeJZSe
+        np6UQxo8UCEAAAAAAAAAAAAAAAAAAAAAAAAAAFA3np6elDwta54zUAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        MlWenp5TKYSeXCFrAAAAAAAAAAAAAAAAAAAAAAAAgwcWYZ6eayRhnp43SgAAAAAAAAAAAAAAAAAAAAAA
+        AF8hIRqEnp6UYZ6enjI3XwAAAAAAAAAAAAAAAAAAAAAA+EFTMp6enp6enp6eazchJVUAAAAAAAAAAAAA
+        AAAAAAAb+DZSnp6enp6enp6enpRQKQAAAAAAAAAAAAAAAAAAhBYbC1+enmtQQ1ODnp6UhEP4AAAAAAAA
+        AAAAAAAAAAAAQSUWhJ5hGiYuHiBrYTIZCgotXAAAAAAAAAAAAAAAAAAAMQsySyErTU1NJzIkKkRGRjQV
+        hAAAAAAAAAAAAAAAAABB+FVDFj1NTU01Cw04R01HPg+DAAAAAAAAAAAAAAAAWw9cnpRBEjhGOBNXByQT
+        GBwjVwAAAAAAAAAAAAAAAABfEVtr+BZLJB8kVpSeaxZTX4QAAAAAAAAAAAAAAAAAa1AoQDAoQ56UhJSe
+        np5LMgAAAAAAAAAAAAAAAAAAAABSDT9/WSNrnp6enp6eXxtfAAAAAAAAAAAAAAAAAAAAAAAkL39REDGU
+        np6enl8bVQAAAAAAAAAAAAAAAAAAAAAAhBsdSCwHYZ6elGFLG1MAAAAAAAAAAAAAAAAAAAAAAAAAXTkN
+        Gi34QTclGvhhAAAAAAAAAAAAAAAAAAAAAAAAAAB6ZzJfVfdJTltpjgAAAAAAAAAAAAAAAAAAAAAAAAAA
+        k3V4aXiRAIFjioxkggAAAAAAAAAAAAAAAAAAAAAAAJN5ZI+RboEAAGaAj2OGAAAAAAAAAAAAAAAAAAAA
+        AAAAe2OOnopijACNZI+HYowAAAAAAAAAAAAAAAAAAAAAAABkaJ6TZWUAAHl1kWR3AAAAAAAAAAAAAAAA
+        AAAAAAAAAGRonmhijACYboGAY48AAAAAAAAAAAAAAAAAAAAAAAAAfWiRZHkAAJFkfnN7AAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAABmdY8AAIBkaGKOAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJF3dQAAAIyNdI8AAAAA
+        AAAAAAAAAAAAAP/j////4Af//+AD///gAf//wAH//8AD///AA///wAP//wAH//4AA//+AAD//gAA//wA
+        AP/+AAA//wAAH/8AAB/+AAA//gAAf/wAA//8AAP//gAH//wAD//+AB///gA///wIH//4DB//+Agf//gY
+        P//4ED//+DB///8YP///HD//
+</value>
+  </data>
+  <data name="$this.ToolTip" xml:space="preserve">
+    <value />
   </data>
 </root>

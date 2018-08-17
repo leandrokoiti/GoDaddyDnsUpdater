@@ -42,6 +42,7 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.grpAppSettings = new System.Windows.Forms.GroupBox();
+            this.chkTray = new System.Windows.Forms.CheckBox();
             this.cmbPeriod = new System.Windows.Forms.ComboBox();
             this.numTimeout = new System.Windows.Forms.NumericUpDown();
             this.lblCheckInterval = new System.Windows.Forms.Label();
@@ -158,6 +159,7 @@
             // grpAppSettings
             // 
             resources.ApplyResources(this.grpAppSettings, "grpAppSettings");
+            this.grpAppSettings.Controls.Add(this.chkTray);
             this.grpAppSettings.Controls.Add(this.cmbPeriod);
             this.grpAppSettings.Controls.Add(this.numTimeout);
             this.grpAppSettings.Controls.Add(this.lblCheckInterval);
@@ -166,6 +168,15 @@
             this.errorProvider.SetIconPadding(this.grpAppSettings, ((int)(resources.GetObject("grpAppSettings.IconPadding"))));
             this.grpAppSettings.Name = "grpAppSettings";
             this.grpAppSettings.TabStop = false;
+            // 
+            // chkTray
+            // 
+            resources.ApplyResources(this.chkTray, "chkTray");
+            this.errorProvider.SetError(this.chkTray, resources.GetString("chkTray.Error"));
+            this.errorProvider.SetIconAlignment(this.chkTray, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("chkTray.IconAlignment"))));
+            this.errorProvider.SetIconPadding(this.chkTray, ((int)(resources.GetObject("chkTray.IconPadding"))));
+            this.chkTray.Name = "chkTray";
+            this.chkTray.UseVisualStyleBackColor = true;
             // 
             // cmbPeriod
             // 
@@ -227,6 +238,7 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.grpAppSettings.ResumeLayout(false);
+            this.grpAppSettings.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numTimeout)).EndInit();
             this.ResumeLayout(false);
 
@@ -249,5 +261,6 @@
         private System.Windows.Forms.ComboBox cmbPeriod;
         private System.Windows.Forms.NumericUpDown numTimeout;
         private System.Windows.Forms.Label lblCheckInterval;
+        private System.Windows.Forms.CheckBox chkTray;
     }
 }

@@ -139,6 +139,22 @@ namespace GoDaddyDns
         }
 
         /// <summary>
+        /// Gets or sets a value indicating whether the application will be minimized to the system tray
+        /// </summary>
+        public static bool MinimizeToTray
+        {
+            get
+            {
+                return Properties.Settings.Default.appMinimizeToTray;
+            }
+            set
+            {
+                Properties.Settings.Default.appMinimizeToTray = value;
+                Properties.Settings.Default.Save();
+            }
+        }
+
+        /// <summary>
         /// Gets the object responsible for loading fonts required by this application and that might not be installed on this machine.
         /// </summary>
         public static FontLoader FontManager { get; private set; } = new FontLoader();

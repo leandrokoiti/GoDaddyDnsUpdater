@@ -8,6 +8,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".Solution Items", ".Solution Items", "{D907D484-520E-48A6-A538-08EAE236A6E4}"
 	ProjectSection(SolutionItems) = preProject
 		Solution Items\fontawesome-webfont.ttf = Solution Items\fontawesome-webfont.ttf
+		Solution Items\godaddy.ico = Solution Items\godaddy.ico
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicDns.Core", "DynamicDns.Core\DynamicDns.Core.csproj", "{34FABD46-60C0-4E00-843C-9F65FB31525C}"

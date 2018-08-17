@@ -117,260 +117,191 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="menuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="updateIpToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>179, 22</value>
-  </data>
-  <data name="updateIpToolStripMenuItem1.Text" xml:space="preserve">
-    <value>&amp;Update All Domains</value>
-  </data>
-  <data name="toolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>176, 6</value>
-  </data>
-  <data name="settingsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>179, 22</value>
-  </data>
-  <data name="settingsToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Settings</value>
-  </data>
-  <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>176, 6</value>
-  </data>
-  <data name="closeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>179, 22</value>
-  </data>
-  <data name="closeToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Close</value>
-  </data>
-  <data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 20</value>
-  </data>
-  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;File</value>
-  </data>
-  <data name="englishToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>134, 22</value>
-  </data>
-  <data name="englishToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;English</value>
-  </data>
-  <data name="portugueseToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>134, 22</value>
-  </data>
-  <data name="portugueseToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Portuguese</value>
-  </data>
-  <data name="languageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 20</value>
-  </data>
-  <data name="languageToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Language</value>
-  </data>
-  <data name="menuStrip.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="menuStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>612, 24</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="menuStrip.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
   <data name="menuStrip.Text" xml:space="preserve">
     <value>menuStrip</value>
-  </data>
-  <data name="&gt;&gt;menuStrip.Name" xml:space="preserve">
-    <value>menuStrip</value>
-  </data>
-  <data name="&gt;&gt;menuStrip.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuStrip.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;menuStrip.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <metadata name="statusStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>229, 19</value>
-  </metadata>
-  <data name="toolStripProgressBar1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 16</value>
-  </data>
-  <data name="lblCurrentIp.AutoSize" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lblCurrentIp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>495, 17</value>
-  </data>
-  <data name="lblCurrentIp.Text" xml:space="preserve">
-    <value>Retrieving current IP address...</value>
-  </data>
-  <data name="lblCurrentIp.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="statusStrip.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 354</value>
-  </data>
-  <data name="statusStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>612, 22</value>
-  </data>
-  <data name="statusStrip.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="statusStrip.Text" xml:space="preserve">
-    <value>statusStrip</value>
-  </data>
-  <data name="&gt;&gt;statusStrip.Name" xml:space="preserve">
-    <value>statusStrip</value>
-  </data>
-  <data name="&gt;&gt;statusStrip.Type" xml:space="preserve">
-    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;statusStrip.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;statusStrip.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="domainDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Domain</value>
-  </data>
-  <metadata name="current_ip.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="current_ip.HeaderText" xml:space="preserve">
-    <value>Current Ip</value>
-  </data>
-  <metadata name="domainBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>338, 19</value>
-  </metadata>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="gvDomains.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="gvDomains.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 24</value>
-  </data>
-  <metadata name="cmsDomain.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>510, 19</value>
-  </metadata>
-  <data name="updateIPToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>125, 22</value>
-  </data>
-  <data name="updateIPToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Update IP</value>
-  </data>
-  <data name="cancelToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>125, 22</value>
-  </data>
-  <data name="cancelToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Cancel</value>
-  </data>
-  <data name="cmsDomain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>126, 48</value>
-  </data>
-  <data name="&gt;&gt;cmsDomain.Name" xml:space="preserve">
-    <value>cmsDomain</value>
-  </data>
-  <data name="&gt;&gt;cmsDomain.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="gvDomains.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
-    <value>Vertical</value>
-  </data>
-  <data name="gvDomains.Size" type="System.Drawing.Size, System.Drawing">
-    <value>612, 330</value>
-  </data>
-  <data name="gvDomains.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;gvDomains.Name" xml:space="preserve">
-    <value>gvDomains</value>
-  </data>
-  <data name="&gt;&gt;gvDomains.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;gvDomains.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;gvDomains.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="btnRefreshAll.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="btnRefreshAll.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="btnRefreshAll.Location" type="System.Drawing.Point, System.Drawing">
-    <value>582, 0</value>
-  </data>
-  <data name="btnRefreshAll.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 24</value>
-  </data>
-  <data name="btnRefreshAll.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="btnRefreshAll.Text" xml:space="preserve">
-    <value></value>
-  </data>
-  <metadata name="btnRefreshToolip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>626, 19</value>
-  </metadata>
-  <data name="btnRefreshAll.ToolTip" xml:space="preserve">
-    <value>Update all domains</value>
-  </data>
-  <data name="&gt;&gt;btnRefreshAll.Name" xml:space="preserve">
-    <value>btnRefreshAll</value>
-  </data>
-  <data name="&gt;&gt;btnRefreshAll.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnRefreshAll.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btnRefreshAll.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <metadata name="timerProgress.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>771, 19</value>
-  </metadata>
-  <metadata name="timerIpRefresh.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>898, 19</value>
-  </metadata>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>612, 376</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Go Daddy DNS Updater</value>
   </data>
-  <data name="&gt;&gt;fileToolStripMenuItem.Name" xml:space="preserve">
-    <value>fileToolStripMenuItem</value>
+  <data name="&gt;&gt;domainDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;fileToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="btnRefreshAll.Text" xml:space="preserve">
+    <value></value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="gvDomains.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="$this.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="trayIcon.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAICAAAAEACACoCAAAFgAAACgAAAAgAAAAQAAAAAEACAAAAAAAgAQAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAD/AACA/wCAAP8AgID/gAAA/4AAgP+AgAD/wMDA/8DcwP/wyqb/KUJC/ykpKf8hMTH/KTEx/zEx
+        Mf8xOTH/ITk5/zk5Of8QQjn/GEI5/ylCQv85QkL/QkJC/0JKQv8YUkL/OUpK/0JKSv9KSkr/KVJK/0pS
+        Sv8YWkr/MVJS/0pSUv9SUlL/QlJa/0paWv9SWlr/Wlpa/xBjWv8Qa1r/IWNj/2NjY/8Ie2P/CIRj/2Nr
+        a/9ra2v/EHtr/xhjc/85a3P/a3Nz/3Nzc/9ze3P/CIxz/wiUc/9ze3v/e3t7/wice/9re4T/e3uE/3uE
+        hP+EhIT/EKWE/wCthP8Yc4z/MXuM/4yMjP+MjJT/lJSU/wi1lP8AvZT/CL2U/wDGlP8QjJz/jJSc/5Sc
+        nP+cnJz/pZyc/wDOnP97jKX/nKWl/6Wlpf8IlK3/pa2t/62trf+trbX/tbW1/7W1vf+1vb3/vb29/wil
+        xv+9xsb/xsbG/87Ozv9rpdb/ztbW/9bW1v/W1t7/3t7e/xiM5/8hjOf/MZTn/zmc5/9CnOf/Upzn/3u1
+        5//W3uf/3ufn/+fn5/8YjO//IYzv/ymU7/8xlO//MZzv/zmc7/9CnO//Spzv/0ql7/9Spe//Uq3v/1qt
+        7/9jre//a63v/2u17/97te//e73v/4S97/+Mve//AMbv/5TG7/+lzu//1ufv/+fv7//v7+//c733/4zG
+        9/+czvf/rc73/63W9/+11vf/vd73/8be9//O3vf/zuf3/9bn9//e7/f/5+/3/+/v9//v9/f/9/f3/87n
+        ///W5///1u///97v///n7///5/f//+/3///39///9///////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ///////////////////////////////////w+///pKCg/4CAgP8AAP//AP8A/wD/////AAD//wD/////
+        AP//////AAAAAAAAAAAAAABrKQcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFsbFjJhYVU7NlgA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAA9zySQxoaKfdLIUEAAAAAAAAAAAAAAAAAAAAAAAAAAAApVZ6elJSe
+        np5rG2sAAAAAAAAAAAAAAAAAAAAAAAAAhCFhnp6enp5hQyUOawAAAAAAAAAAAAAAAAAAAAAAAABeJZSe
+        np6UQxo8UCEAAAAAAAAAAAAAAAAAAAAAAAAAAFA3np6elDwta54zUAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        MlWenp5TKYSeXCFrAAAAAAAAAAAAAAAAAAAAAAAAgwcWYZ6eayRhnp43SgAAAAAAAAAAAAAAAAAAAAAA
+        AF8hIRqEnp6UYZ6enjI3XwAAAAAAAAAAAAAAAAAAAAAA+EFTMp6enp6enp6eazchJVUAAAAAAAAAAAAA
+        AAAAAAAb+DZSnp6enp6enp6enpRQKQAAAAAAAAAAAAAAAAAAhBYbC1+enmtQQ1ODnp6UhEP4AAAAAAAA
+        AAAAAAAAAAAAQSUWhJ5hGiYuHiBrYTIZCgotXAAAAAAAAAAAAAAAAAAAMQsySyErTU1NJzIkKkRGRjQV
+        hAAAAAAAAAAAAAAAAABB+FVDFj1NTU01Cw04R01HPg+DAAAAAAAAAAAAAAAAWw9cnpRBEjhGOBNXByQT
+        GBwjVwAAAAAAAAAAAAAAAABfEVtr+BZLJB8kVpSeaxZTX4QAAAAAAAAAAAAAAAAAa1AoQDAoQ56UhJSe
+        np5LMgAAAAAAAAAAAAAAAAAAAABSDT9/WSNrnp6enp6eXxtfAAAAAAAAAAAAAAAAAAAAAAAkL39REDGU
+        np6enl8bVQAAAAAAAAAAAAAAAAAAAAAAhBsdSCwHYZ6elGFLG1MAAAAAAAAAAAAAAAAAAAAAAAAAXTkN
+        Gi34QTclGvhhAAAAAAAAAAAAAAAAAAAAAAAAAAB6ZzJfVfdJTltpjgAAAAAAAAAAAAAAAAAAAAAAAAAA
+        k3V4aXiRAIFjioxkggAAAAAAAAAAAAAAAAAAAAAAAJN5ZI+RboEAAGaAj2OGAAAAAAAAAAAAAAAAAAAA
+        AAAAe2OOnopijACNZI+HYowAAAAAAAAAAAAAAAAAAAAAAABkaJ6TZWUAAHl1kWR3AAAAAAAAAAAAAAAA
+        AAAAAAAAAGRonmhijACYboGAY48AAAAAAAAAAAAAAAAAAAAAAAAAfWiRZHkAAJFkfnN7AAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAABmdY8AAIBkaGKOAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJF3dQAAAIyNdI8AAAAA
+        AAAAAAAAAAAAAP/j////4Af//+AD///gAf//wAH//8AD///AA///wAP//wAH//4AA//+AAD//gAA//wA
+        AP/+AAA//wAAH/8AAB/+AAA//gAAf/wAA//8AAP//gAH//wAD//+AB///gA///wIH//4DB//+Agf//gY
+        P//4ED//+DB///8YP///HD//
+</value>
+  </data>
+  <data name="showGoDaddyDNSUpdaterToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Show Go Daddy DNS Updater</value>
+  </data>
+  <data name="englishToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;English</value>
+  </data>
+  <data name="&gt;&gt;cmsDomain.Name" xml:space="preserve">
+    <value>cmsDomain</value>
+  </data>
+  <data name="lblCurrentIp.Text" xml:space="preserve">
+    <value>Retrieving current IP address...</value>
   </data>
   <data name="&gt;&gt;updateIpToolStripMenuItem1.Name" xml:space="preserve">
     <value>updateIpToolStripMenuItem1</value>
   </data>
-  <data name="&gt;&gt;updateIpToolStripMenuItem1.Type" xml:space="preserve">
+  <data name="&gt;&gt;showGoDaddyDNSUpdaterToolStripMenuItem.Name" xml:space="preserve">
+    <value>showGoDaddyDNSUpdaterToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;current_ip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="portugueseToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 22</value>
+  </data>
+  <data name="&gt;&gt;exitToolStripMenuItem.Name" xml:space="preserve">
+    <value>exitToolStripMenuItem</value>
+  </data>
+  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;File</value>
+  </data>
+  <data name="&gt;&gt;toolStripProgressBar1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="menuStrip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>612, 24</value>
+  </data>
+  <data name="&gt;&gt;domainBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;timerIpRefresh.Name" xml:space="preserve">
+    <value>timerIpRefresh</value>
+  </data>
+  <data name="&gt;&gt;closeToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;toolStripMenuItem2.Name" xml:space="preserve">
-    <value>toolStripMenuItem2</value>
+  <data name="&gt;&gt;lblCurrentIp.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;timerIpRefresh.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;toolStripMenuItem2.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="showGoDaddyDNSUpdaterToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 22</value>
+  </data>
+  <data name="&gt;&gt;statusStrip.Name" xml:space="preserve">
+    <value>statusStrip</value>
+  </data>
+  <data name="btnRefreshAll.Location" type="System.Drawing.Point, System.Drawing">
+    <value>582, 0</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnRefreshAll.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;cmsTray.Name" xml:space="preserve">
+    <value>cmsTray</value>
+  </data>
+  <data name="englishToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 22</value>
+  </data>
+  <data name="&gt;&gt;domainDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>domainDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;gvDomains.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="settingsToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Settings</value>
+  </data>
+  <data name="updateIpToolStripMenuItem1.Text" xml:space="preserve">
+    <value>&amp;Update All Domains</value>
+  </data>
+  <data name="languageToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Language</value>
+  </data>
+  <data name="gvDomains.Size" type="System.Drawing.Size, System.Drawing">
+    <value>612, 330</value>
+  </data>
+  <data name="&gt;&gt;lblCurrentIp.Name" xml:space="preserve">
+    <value>lblCurrentIp</value>
+  </data>
+  <data name="&gt;&gt;statusStrip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cmsTray.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;timerProgress.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="gvDomains.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 24</value>
+  </data>
+  <data name="&gt;&gt;cancelToolStripMenuItem.Name" xml:space="preserve">
+    <value>cancelToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;domainBindingSource.Name" xml:space="preserve">
+    <value>domainBindingSource</value>
+  </data>
+  <data name="statusStrip.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="btnRefreshAll.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="statusStrip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>612, 22</value>
   </data>
   <data name="&gt;&gt;settingsToolStripMenuItem.Name" xml:space="preserve">
     <value>settingsToolStripMenuItem</value>
@@ -378,100 +309,280 @@
   <data name="&gt;&gt;settingsToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;toolStripMenuItem1.Name" xml:space="preserve">
-    <value>toolStripMenuItem1</value>
-  </data>
-  <data name="&gt;&gt;toolStripMenuItem1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;closeToolStripMenuItem.Name" xml:space="preserve">
-    <value>closeToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;closeToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;languageToolStripMenuItem.Name" xml:space="preserve">
     <value>languageToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;languageToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;englishToolStripMenuItem.Name" xml:space="preserve">
-    <value>englishToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;englishToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;portugueseToolStripMenuItem.Name" xml:space="preserve">
-    <value>portugueseToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;portugueseToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripProgressBar1.Name" xml:space="preserve">
-    <value>toolStripProgressBar1</value>
-  </data>
-  <data name="&gt;&gt;toolStripProgressBar1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblCurrentIp.Name" xml:space="preserve">
-    <value>lblCurrentIp</value>
-  </data>
-  <data name="&gt;&gt;lblCurrentIp.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;domainDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>domainDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;domainDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;current_ip.Name" xml:space="preserve">
-    <value>current_ip</value>
-  </data>
-  <data name="&gt;&gt;current_ip.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;domainBindingSource.Name" xml:space="preserve">
-    <value>domainBindingSource</value>
-  </data>
-  <data name="&gt;&gt;domainBindingSource.Type" xml:space="preserve">
-    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;updateIPToolStripMenuItem.Name" xml:space="preserve">
-    <value>updateIPToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;updateIPToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cancelToolStripMenuItem.Name" xml:space="preserve">
-    <value>cancelToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;cancelToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnRefreshToolip.Name" xml:space="preserve">
-    <value>btnRefreshToolip</value>
   </data>
   <data name="&gt;&gt;btnRefreshToolip.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="toolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>176, 6</value>
+  </data>
+  <data name="btnRefreshAll.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="gvDomains.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;trayIcon.Name" xml:space="preserve">
+    <value>trayIcon</value>
+  </data>
+  <data name="statusStrip.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 354</value>
+  </data>
+  <data name="&gt;&gt;trayIcon.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NotifyIcon, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="trayIcon.BalloonTipText" xml:space="preserve">
+    <value>Go Daddy DNS Updater is still running</value>
+  </data>
+  <data name="btnRefreshAll.ToolTip" xml:space="preserve">
+    <value>Update all domains</value>
+  </data>
+  <data name="&gt;&gt;languageToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>176, 6</value>
+  </data>
+  <data name="&gt;&gt;portugueseToolStripMenuItem.Name" xml:space="preserve">
+    <value>portugueseToolStripMenuItem</value>
+  </data>
+  <data name="lblCurrentIp.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="menuStrip.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="menuStrip.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="gvDomains.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
   <data name="&gt;&gt;timerProgress.Name" xml:space="preserve">
     <value>timerProgress</value>
   </data>
-  <data name="&gt;&gt;timerProgress.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="portugueseToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Portuguese</value>
   </data>
-  <data name="&gt;&gt;timerIpRefresh.Name" xml:space="preserve">
-    <value>timerIpRefresh</value>
+  <data name="menuStrip.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
-  <data name="&gt;&gt;timerIpRefresh.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="trayIcon.Text" xml:space="preserve">
+    <value>Go Daddy DNS Updater</value>
+  </data>
+  <data name="closeToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Close</value>
+  </data>
+  <data name="&gt;&gt;portugueseToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;exitToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuStrip.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;statusStrip.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="exitToolStripMenuItem.Text" xml:space="preserve">
+    <value>E&amp;xit</value>
+  </data>
+  <data name="&gt;&gt;englishToolStripMenuItem.Name" xml:space="preserve">
+    <value>englishToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;btnRefreshToolip.Name" xml:space="preserve">
+    <value>btnRefreshToolip</value>
+  </data>
+  <data name="&gt;&gt;current_ip.Name" xml:space="preserve">
+    <value>current_ip</value>
+  </data>
+  <data name="statusStrip.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;gvDomains.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="settingsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>179, 22</value>
+  </data>
+  <data name="&gt;&gt;menuStrip.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnRefreshAll.Name" xml:space="preserve">
+    <value>btnRefreshAll</value>
+  </data>
+  <data name="&gt;&gt;menuStrip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>GoDaddyDns.frmBase, GoDaddyDns, Version=1.0.0.3, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;gvDomains.Name" xml:space="preserve">
+    <value>gvDomains</value>
+  </data>
+  <data name="&gt;&gt;statusStrip.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnRefreshAll.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="updateIPToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>125, 22</value>
+  </data>
+  <data name="&gt;&gt;updateIPToolStripMenuItem.Name" xml:space="preserve">
+    <value>updateIPToolStripMenuItem</value>
+  </data>
+  <data name="updateIpToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>179, 22</value>
+  </data>
+  <data name="cmsDomain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>126, 48</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem1.Name" xml:space="preserve">
+    <value>toolStripMenuItem1</value>
+  </data>
+  <data name="&gt;&gt;toolStripProgressBar1.Name" xml:space="preserve">
+    <value>toolStripProgressBar1</value>
+  </data>
+  <data name="domainDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Domain</value>
+  </data>
+  <data name="gvDomains.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+    <value>Vertical</value>
+  </data>
+  <data name="cancelToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Cancel</value>
+  </data>
+  <data name="lblCurrentIp.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;fileToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 20</value>
+  </data>
+  <data name="exitToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 22</value>
+  </data>
+  <data name="&gt;&gt;btnRefreshAll.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cmsTray.Size" type="System.Drawing.Size, System.Drawing">
+    <value>230, 48</value>
+  </data>
+  <data name="cancelToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>125, 22</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem2.Name" xml:space="preserve">
+    <value>toolStripMenuItem2</value>
+  </data>
+  <data name="cmsDomain.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;fileToolStripMenuItem.Name" xml:space="preserve">
+    <value>fileToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>frmMain</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>GoDaddyDns.frmBase, GoDaddyDns, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  <data name="&gt;&gt;showGoDaddyDNSUpdaterToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="closeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>179, 22</value>
+  </data>
+  <data name="&gt;&gt;updateIpToolStripMenuItem1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmsTray.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;englishToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblCurrentIp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>495, 17</value>
+  </data>
+  <data name="&gt;&gt;menuStrip.Name" xml:space="preserve">
+    <value>menuStrip</value>
+  </data>
+  <data name="&gt;&gt;closeToolStripMenuItem.Name" xml:space="preserve">
+    <value>closeToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;updateIPToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnRefreshAll.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>612, 376</value>
+  </data>
+  <data name="toolStripProgressBar1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 16</value>
+  </data>
+  <data name="languageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 20</value>
+  </data>
+  <data name="btnRefreshAll.Size" type="System.Drawing.Size, System.Drawing">
+    <value>30, 24</value>
+  </data>
+  <data name="&gt;&gt;cmsDomain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="updateIPToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Update IP</value>
+  </data>
+  <data name="&gt;&gt;cancelToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gvDomains.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="current_ip.HeaderText" xml:space="preserve">
+    <value>Current Ip</value>
+  </data>
+  <data name="statusStrip.Text" xml:space="preserve">
+    <value>statusStrip</value>
+  </data>
+  <metadata name="statusStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>229, 19</value>
+  </metadata>
+  <metadata name="cmsDomain.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>510, 19</value>
+  </metadata>
+  <metadata name="timerIpRefresh.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>898, 19</value>
+  </metadata>
+  <metadata name="current_ip.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="menuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="timerProgress.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>771, 19</value>
+  </metadata>
+  <metadata name="domainBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>338, 19</value>
+  </metadata>
+  <metadata name="trayIcon.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>113, 58</value>
+  </metadata>
+  <metadata name="cmsTray.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 58</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="btnRefreshToolip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>626, 19</value>
+  </metadata>
 </root>

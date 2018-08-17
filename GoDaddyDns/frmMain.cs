@@ -35,7 +35,7 @@ namespace GoDaddyDns
         #region Constructors
         public frmMain()
         {
-            initializeUI();
+            InitializeUI();
 
             this.CultureChanged += FrmMain_CultureChanged;
             NetworkStatus.AvailabilityChanged += NetworkStatus_AvailabilityChanged;
@@ -69,9 +69,9 @@ namespace GoDaddyDns
 
         private async void frmMain_Load(object sender, EventArgs e)
         {
-            await refreshDomainsList();
+            await RefreshDomainsList();
 
-            await loadCurrentIpAddress();
+            await LoadCurrentIpAddress();
         }
 
         private async void NetworkStatus_AvailabilityChanged(object sender, NetworkStatusChangedArgs e)
@@ -81,13 +81,13 @@ namespace GoDaddyDns
             // If there's no network available we simply disable the network functions.
             if (e.IsAvailable)
             {
-                await loadCurrentIpAddress();
+                await LoadCurrentIpAddress();
 
-                toggleUiNetworkFunctions(true);
+                ToggleUiNetworkFunctions(true);
             }
             else
             {
-                toggleUiNetworkFunctions(false);
+                ToggleUiNetworkFunctions(false);
             }
         }
 
@@ -101,7 +101,7 @@ namespace GoDaddyDns
                 this._dnsManager = new DnsManager(
                     new GoDaddyHttpClient(Program.ApiKey, Program.ApiSecret), Program.DefaultTtl);
                 this.timerIpRefresh.Interval = (int)Program.UpdateFrequency.TotalMilliseconds;
-                await refreshDomainsList();
+                await RefreshDomainsList();
             }
         }
 
@@ -117,7 +117,7 @@ namespace GoDaddyDns
 
         private async void updateIpToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            await updateAllDomains();
+            await UpdateAllDomains();
         }
 
         private void gvDomains_MouseDown(object sender, MouseEventArgs e)
@@ -138,17 +138,17 @@ namespace GoDaddyDns
 
         private async void btnRefreshAll_Click(object sender, EventArgs e)
         {
-            await loadCurrentIpAddress();
+            await LoadCurrentIpAddress();
         }
 
         private void englishToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            changeCulture("en-US");
+            ChangeCulture("en-US");
         }
 
         private void portugueseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            changeCulture("pt-BR");
+            ChangeCulture("pt-BR");
         }
 
         private async void updateIPToolStripMenuItem_Click(object sender, EventArgs e)
@@ -156,8 +156,42 @@ namespace GoDaddyDns
             foreach (DataGridViewRow row in this.gvDomains.SelectedRows)
             {
                 if (row.DataBoundItem is DomainSummaryDto domain)
-                    await updateDomain(domain);
+                    await UpdateDomain(domain);
             }
+        }
+
+        private async void timerIpRefresh_Tick(object sender, EventArgs e)
+        {
+            await LoadCurrentIpAddress();
+        }
+
+        private void frmMain_Resize(object sender, EventArgs e)
+        {
+            if (Program.MinimizeToTray && FormWindowState.Minimized == this.WindowState)
+            {
+                this.trayIcon.Visible = true;
+                this.trayIcon.ShowBalloonTip(500);
+                this.Hide();
+            }
+            else if (FormWindowState.Normal == this.WindowState)
+            {
+                this.trayIcon.Visible = false;
+            }
+        }
+
+        private void trayIcon_DoubleClick(object sender, EventArgs e)
+        {
+            RestoreWindow();
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void showGoDaddyDNSUpdaterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RestoreWindow();
         }
         #endregion
 
@@ -174,23 +208,23 @@ namespace GoDaddyDns
         /// Changes the culture of the application for the culture specified.
         /// </summary>
         /// <param name="name"><see cref="CultureInfo.Name"/></param>
-        private void changeCulture(string name)
+        private void ChangeCulture(string name)
         {
             Program.GlobalUICulture = new CultureInfo(name);
-            initializeUI();
+            InitializeUI();
         }
 
         /// <summary>
         /// Refreshes the ip of the selected domain.
         /// </summary>
         /// <returns></returns>
-        private async Task updateDomain(DomainSummaryDto domain)
+        private async Task UpdateDomain(DomainSummaryDto domain)
         {
             var updateMessage = String.Format(Properties.Resources.frmMain_UpdatingDomainIp, domain.Domain);
-            await updateDomain(updateMessage, async () =>
+            await UpdateDomain(updateMessage, async () =>
             {
                 await this._dnsManager.UpdateDomain(domain, this._currentIp);
-                await refreshDomainsList();
+                await RefreshDomainsList();
             });
         }
 
@@ -198,13 +232,13 @@ namespace GoDaddyDns
         /// Refreshes the ip of every domain stored in this application.
         /// </summary>
         /// <returns></returns>
-        private async Task updateAllDomains()
+        private async Task UpdateAllDomains()
         {
             var updateMessage = Properties.Resources.frmMain_UpdatingDomainsIp;
-            await updateDomain(updateMessage, async () =>
+            await UpdateDomain(updateMessage, async () =>
             {
                 await this._dnsManager.UpdateAllDomains(this._currentIp);
-                await refreshDomainsList();
+                await RefreshDomainsList();
             });
         }
 
@@ -215,13 +249,13 @@ namespace GoDaddyDns
         /// <returns></returns>
         /// <remarks>The function will be a function that uses GoDaddy's API, that's why it needs a key and
         /// a secret set before running it.</remarks>
-        private async Task runGoDaddyFunction(Func<Task> fx)
+        private async Task RunGoDaddyFunction(Func<Task> fx)
         {
             if (String.IsNullOrWhiteSpace(Program.ApiKey) ||
                 String.IsNullOrWhiteSpace(Program.ApiSecret))
                 return;
 
-            await startProgress(fx);
+            await StartProgress(fx);
         }
 
         /// <summary>
@@ -231,9 +265,9 @@ namespace GoDaddyDns
         /// <param name="updatingMessage">The message to set in the user interface.</param>
         /// <param name="fx">The function to invoke.</param>
         /// <returns></returns>
-        private async Task updateDomain(string updatingMessage, Func<Task> fx)
+        private async Task UpdateDomain(string updatingMessage, Func<Task> fx)
         {
-            await runGoDaddyFunction(async () =>
+            await RunGoDaddyFunction(async () =>
             {
                 var lastMessage = this.lblCurrentIp.Text;
 
@@ -249,7 +283,7 @@ namespace GoDaddyDns
         /// Enables or disables the functions that require an internet connection.
         /// </summary>
         /// <param name="enabled"></param>
-        private void toggleUiNetworkFunctions(bool enabled)
+        private void ToggleUiNetworkFunctions(bool enabled)
         {
             this.Invoke((MethodInvoker)delegate ()
             {
@@ -262,9 +296,9 @@ namespace GoDaddyDns
         /// <summary>
         /// Lists all domains available.
         /// </summary>
-        private async Task refreshDomainsList()
+        private async Task RefreshDomainsList()
         {
-            await runGoDaddyFunction(async () =>
+            await RunGoDaddyFunction(async () =>
             {
                 this.gvDomains.Enabled = false;
                 this.gvDomains.DataSource = await this._dnsManager.ListDomains();
@@ -277,7 +311,7 @@ namespace GoDaddyDns
         /// </summary>
         /// <param name="fx">The method to be executed that will need a progress bar while the user awaits.</param>
         /// <returns></returns>
-        private async Task startProgress(Func<Task> fx)
+        private async Task StartProgress(Func<Task> fx)
         {
             this.toolStripProgressBar1.Value = 0;
             this.toolStripProgressBar1.Visible = true;
@@ -290,14 +324,14 @@ namespace GoDaddyDns
             }
             finally
             {
-                stopProgress();
+                StopProgress();
             }
         }
 
         /// <summary>
         /// Stops the progress bar and resets its value.
         /// </summary>
-        private void stopProgress()
+        private void StopProgress()
         {
             this.toolStripProgressBar1.Value = 0;
 
@@ -308,7 +342,7 @@ namespace GoDaddyDns
         /// Invokes a webmethod to check for the external ip address of the network of this machine.
         /// </summary>
         /// <returns></returns>
-        private async Task loadCurrentIpAddress()
+        private async Task LoadCurrentIpAddress()
         {
             this.lblCurrentIp.Text = Properties.Resources.frmMain_CheckingIp;
 
@@ -322,7 +356,7 @@ namespace GoDaddyDns
                     if (currentIp.Ip != this._currentIp)
                     {
                         this._currentIp = currentIp.Ip;
-                        await this.updateAllDomains();
+                        await this.UpdateAllDomains();
                     }
                     else
                     {
@@ -344,7 +378,7 @@ namespace GoDaddyDns
         /// Logic required to initialize the User Interface.
         /// </summary>
         /// <remarks>Must be called every time the current culture of the application is changed.</remarks>
-        private async void initializeUI()
+        private async void InitializeUI()
         {
             // Stores the default culture of the application as the current culture
             if (String.IsNullOrWhiteSpace(Properties.Settings.Default.appLanguage))
@@ -368,24 +402,24 @@ namespace GoDaddyDns
             this.timerIpRefresh.Interval = (int)Program.UpdateFrequency.TotalMilliseconds;
 
             // Loads fonts stored within this application
-            setCustomFonts();
+            SetCustomFonts();
 
             // Refreshes the ip (since we invoke this method when this application starts, we need to check if the handle is already created
             // If not, the method will be invoked later by the initialization of the form itself
             if (this.IsHandleCreated)
             {
-                await refreshDomainsList();
-                await loadCurrentIpAddress();
+                await RefreshDomainsList();
+                await LoadCurrentIpAddress();
             }
 
             // 
-            highlightCurrentLanguage();
+            HighlightCurrentLanguage();
         }
 
         /// <summary>
         /// Marks the current language of the application with an "✓" before its text
         /// </summary>
-        private void highlightCurrentLanguage()
+        private void HighlightCurrentLanguage()
         {
             if (System.Threading.Thread.CurrentThread.CurrentUICulture.Name == "pt-BR")
             {
@@ -400,15 +434,17 @@ namespace GoDaddyDns
         /// <summary>
         /// Loads fonts stored inside the application and sets them to the required controls.
         /// </summary>
-        private void setCustomFonts()
+        private void SetCustomFonts()
         {
             this.btnRefreshAll.Font = Program.FontManager.Load("FontAwesome", 12F, FontStyle.Regular);
         }
-        #endregion
 
-        private async void timerIpRefresh_Tick(object sender, EventArgs e)
+        private void RestoreWindow()
         {
-            await loadCurrentIpAddress();
+            this.Show();
+            this.BringToFront();
+            this.WindowState = FormWindowState.Normal;
         }
+        #endregion
     }
 }
