@@ -1,5 +1,5 @@
 # Dynamic DNS Updater Client
-contributing to lenadro's https://github.com/leandrokoiti/GoDaddyDnsUpdater Project, and the idea is to modularize, and make the project Accept any Dns Provider
+contributing to Leandro's https://github.com/leandrokoiti/GoDaddyDnsUpdater Project, and the idea is to modularize, and make the project Accept any Dns Provider
 
 # GoDaddy Dynamic DNS Updater Client
 .NET Client that uses the GoDaddy's API interface to automatically update the DNS information whenever 
