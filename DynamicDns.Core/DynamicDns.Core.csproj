@@ -46,6 +46,8 @@
   <ItemGroup>
     <Compile Include="Classes\DnsManager.cs" />
     <Compile Include="Classes\GoDaddyHttpClient.cs" />
+    <Compile Include="Interfaces\IDnsClient.cs" />
+    <Compile Include="Interfaces\IDnsManager.cs" />
     <Compile Include="Classes\IpInfoIpRetriever.cs" />
     <Compile Include="Classes\NetworkStatus.cs" />
     <Compile Include="Classes\NetworkStatusChangedArgs.cs" />

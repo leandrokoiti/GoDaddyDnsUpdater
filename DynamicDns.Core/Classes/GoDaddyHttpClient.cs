@@ -4,13 +4,14 @@ using System.Text;
 using System.Threading.Tasks;
 using DynamicDns.Core.Dto;
 using Newtonsoft.Json;
+using DynamicDns.Core.Interfaces;
 
 namespace DynamicDns.Core.Classes
 {
     /// <summary>
     /// <see cref="System.Net.Http.HttpClient"/> wrapper that includes the Authorization header on each request.
     /// </summary>
-    public class GoDaddyHttpClient : HttpClient
+    public class GoDaddyHttpClient : HttpClient, IDnsClient
     {
         #region Constructors
         public GoDaddyHttpClient(string apiKey, string apiSecret)

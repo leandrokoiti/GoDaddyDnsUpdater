@@ -27,7 +27,8 @@ namespace GoDaddyDns
         /// </summary>
         protected string _currentIp;
 
-        private DnsManager _dnsManager = new DnsManager(Program.ApiKey, Program.ApiSecret, Program.DefaultTtl);
+        private DnsManager _dnsManager = new DnsManager(
+            new GoDaddyHttpClient(Program.ApiKey, Program.ApiSecret), Program.DefaultTtl);
         private IIpRetriever _ipRetriever = new IpInfoIpRetriever();
         #endregion
 
@@ -97,7 +98,8 @@ namespace GoDaddyDns
             if (result == DialogResult.OK)
             {
                 this.gvDomains.DataSource = null;
-                this._dnsManager = new DnsManager(Program.ApiKey, Program.ApiSecret, Program.DefaultTtl);
+                this._dnsManager = new DnsManager(
+                    new GoDaddyHttpClient(Program.ApiKey, Program.ApiSecret), Program.DefaultTtl);
                 this.timerIpRefresh.Interval = (int)Program.UpdateFrequency.TotalMilliseconds;
                 await refreshDomainsList();
             }
