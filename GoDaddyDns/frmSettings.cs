@@ -22,14 +22,18 @@ namespace GoDaddyDns
         private void frmSettings_Load(object sender, EventArgs e)
         {
             var apiKey = Program.ApiKey;
+            var apiSecret = Program.ApiSecret;
 
             if (!String.IsNullOrWhiteSpace(apiKey))
                 this.txtApiKey.Text = apiKey;
 
-            this.txtDefaultTtl.Text = Program.DefaultTtl.ToString();
+            if (!String.IsNullOrWhiteSpace(apiSecret))
+                this.txtApiSecret.Text = "".PadLeft(apiSecret.Length, '*');
+
+            this.numTtl.Value = Program.DefaultTtl;
             this.chkTray.Checked = Program.MinimizeToTray;
 
-            if ( Program.UpdateFrequency.TotalDays >= 1)
+            if (Program.UpdateFrequency.TotalDays >= 1)
             {
                 this.numTimeout.Value = (int)Program.UpdateFrequency.TotalDays;
                 this.cmbPeriod.SelectedIndex = (int)TimePeriod.Days;
@@ -44,7 +48,7 @@ namespace GoDaddyDns
                 this.numTimeout.Value = (int)Program.UpdateFrequency.TotalMinutes;
                 this.cmbPeriod.SelectedIndex = (int)TimePeriod.Minutes;
             }
-            else 
+            else
             {
                 this.numTimeout.Value = (int)Program.UpdateFrequency.TotalSeconds;
                 this.cmbPeriod.SelectedIndex = (int)TimePeriod.Seconds;
@@ -55,14 +59,17 @@ namespace GoDaddyDns
         {
             var apiKey = this.txtApiKey.Text;
             var apiSecret = this.txtApiSecret.Text;
-            var defaultTtl = Convert.ToInt32(this.txtDefaultTtl.Text);
+            var defaultTtl = (int)this.numTtl.Value;
             var intervalValue = this.numTimeout.Value;
             var intervalPeriod = (TimePeriod)this.cmbPeriod.SelectedIndex;
             var interval = generateInterval(intervalValue, intervalPeriod);
             var minimizeToTray = this.chkTray.Checked;
 
             Program.ApiKey = apiKey;
-            Program.ApiSecret = apiSecret;
+            if (apiSecret.Trim('*').Length > 0)
+            {
+                Program.ApiSecret = apiSecret;
+            }
             Program.DefaultTtl = defaultTtl;
             Program.UpdateFrequency = interval;
             Program.MinimizeToTray = minimizeToTray;
@@ -74,7 +81,7 @@ namespace GoDaddyDns
         {
             Func<double, TimeSpan> evaluator = null;
 
-            switch ( intervalPeriod)
+            switch (intervalPeriod)
             {
                 case TimePeriod.Seconds:
                     evaluator = TimeSpan.FromSeconds;
@@ -102,16 +109,6 @@ namespace GoDaddyDns
         private void txtRemarks_LinkClicked(object sender, LinkClickedEventArgs e)
         {
             Process.Start(e.LinkText);
-        }
-
-        private void txtDefaultTtl_Validating(object sender, CancelEventArgs e)
-        {
-            if (!int.TryParse(this.txtDefaultTtl.Text, out int validInteger))
-            {
-                e.Cancel = true;
-                this.txtDefaultTtl.Select(0, this.txtDefaultTtl.Text.Length);
-                this.errorProvider.SetError(this.txtDefaultTtl, Properties.Resources.frmSettings_InvalidTtl);
-            }
         }
     }
 }

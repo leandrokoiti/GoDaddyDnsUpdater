@@ -85,7 +85,7 @@ namespace GoDaddyDns.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        [global::System.Configuration.DefaultSettingValueAttribute("600")]
         public int gdDefaultTtl {
             get {
                 return ((int)(this["gdDefaultTtl"]));

@@ -43,7 +43,8 @@ namespace DynamicDns.Core.Classes
                 }
             }), Encoding.UTF8, "application/json");
 
-            await this.PutAsync($"https://api.godaddy.com/v1/domains/{domain.Domain}/records/A/{record.Name}", content);
+            var response = await this.PutAsync($"https://api.godaddy.com/v1/domains/{domain.Domain}/records/A/{record.Name}", content);
+            response.EnsureSuccessStatusCode();
         }
         #endregion
     }
