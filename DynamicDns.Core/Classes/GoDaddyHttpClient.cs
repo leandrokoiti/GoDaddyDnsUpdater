@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using DynamicDns.Core.Dto;
 using Newtonsoft.Json;
 using DynamicDns.Core.Interfaces;
+using System.Net;
 
 namespace DynamicDns.Core.Classes
 {
@@ -14,6 +15,12 @@ namespace DynamicDns.Core.Classes
     public class GoDaddyHttpClient : HttpClient, IDnsClient
     {
         #region Constructors
+        static GoDaddyHttpClient()
+        {
+            // fix "The request was aborted: Could not create SSL/TLS secure channel" error
+            ServicePointManager.Expect100Continue = true;
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+        }
         public GoDaddyHttpClient(string apiKey, string apiSecret)
         {
             this.DefaultRequestHeaders.Add("Authorization", $"sso-key {apiKey}:{apiSecret}");
